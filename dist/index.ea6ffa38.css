@@ -176,7 +176,7 @@ canvas.webgl {
 }
 
 .section__button:hover, .section__button:focus {
-  border: 2px solid #dd51b1;
+  border: 2px solid gold;
 }
 
 .layout__line {

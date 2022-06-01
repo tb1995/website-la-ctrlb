@@ -10,9 +10,9 @@ body {
   --color-text: white;
   --color-bg: black;
   --color-1: blue;
-  --color-2: purple;
+  --color-2: gold;
   --color-link: white;
-  --color-link-hover: white;
+  --color-link-hover: gold;
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -113,6 +113,27 @@ a:focus-visible {
 .content {
   width: 100%;
   height: calc(100vh - 13rem);
+}
+
+.contact-paragraph {
+  width: 60%;
+  margin-bottom: 18px;
+  font-size: 25px;
+}
+
+.form-field {
+  width: 300px;
+  height: 40px;
+  background-color: #053f5e;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.form-field:focus {
+  border: none;
+  border-bottom: 1px solid gold;
+  outline: none !important;
 }
 
 @media screen and (min-width: 53em) {

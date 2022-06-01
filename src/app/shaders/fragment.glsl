@@ -28,6 +28,6 @@ void main() {
   // gl_FragColor = vec4(min(uDeepPurple, 1.), 0., .5, min(uOpacity, 1.));
   //  gl_FragColor = vec4(1.0, 0.84, 0, 1.0);
   vec3 yellow = vec3(1.0, 0.84, 0.0);
-  gl_FragColor = vec4(min(1., 1.), 0.84, .0, min(uOpacity, 1.));
+  gl_FragColor = vec4(min(0.88, 1.), 0.84, min(uDeepPurple, 1.), min(uOpacity, 1.));
 
 }
