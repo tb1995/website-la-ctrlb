@@ -22,7 +22,7 @@
     "parcel": "latest"
   },
   "dependencies": {
-    "gsap": "^3.7.0",
+    "gsap": "3.10.4",
     "three": "^0.129.0"
   }
 }

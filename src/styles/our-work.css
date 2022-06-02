@@ -1,0 +1,160 @@
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+section {   
+    height: 100vh;
+    width: 100vw;
+    /* background-color: red !important; */
+    z-index: 1;
+}
+
+
+
+.zoneomics {
+    background-color: black;
+}
+
+.goldstar {
+    background-color: green;
+}
+
+.luxor {
+    background-color: purple;
+}
+
+.loren {
+    background-color: orange;
+}
+
+.nuage {
+    background-color: #ffd700;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-column {
+    flex: 0 1 40%;
+    /* background-color: red; */
+    background-image: url("../images/zoneomics.jpg");
+    background-size: cover;
+    background-position-y: center;
+    margin: 2% 0;
+    position: relative;
+}
+
+.right-column {
+    flex: 0 1 40%;
+    /* background-color: green; */
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.section-heading {
+    text-transform: uppercase;
+    font-size: 90px;
+    position: absolute;
+    left: -280px;
+    bottom: 30%;
+    letter-spacing: 10px;
+    transform: rotate(270deg);
+}
+
+.round-button {
+    border-radius: 50%;
+    background-color: #115173;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 210px;
+    height: 210px;
+    z-index: 4;
+    border: none;
+    font-size: 24px;
+}
+
+.description {
+    color: white;
+    text-align: left;
+    max-width: 330px;
+    font-size: 20px;
+}
+
+.visit-link {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    outline: none;
+}
+
+.mini {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    right: -100px;
+    bottom: 15%;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .mini {
+    width: 210px;
+    height: 140px;
+    position: absolute;
+    right: -40px;
+    bottom: 15%;
+}
+
+.section-heading {
+    font-size: 70px;
+    left: -220px;
+    bottom: 36%;
+
+}
+
+.round-button {
+    width: 140px;
+    height: 140px;
+    font-size: 21px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .mini {
+    width: 270px;
+    height: 180px;
+    position: absolute;
+    right: -45px;
+    bottom: 15%;
+}
+
+.section-heading {
+
+    bottom: 0;
+    transform: translateY(-230px) rotate(270deg);
+
+}
+
+}

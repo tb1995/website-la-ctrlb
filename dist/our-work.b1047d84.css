@@ -1,0 +1,149 @@
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.zoneomics {
+  background-color: #000;
+}
+
+.goldstar {
+  background-color: green;
+}
+
+.luxor {
+  background-color: purple;
+}
+
+.loren {
+  background-color: orange;
+}
+
+.nuage {
+  background-color: gold;
+}
+
+.panel {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.left-column {
+  background-image: url("zoneomics.f8ec6b0d.jpg");
+  background-position-y: center;
+  background-size: cover;
+  flex: 0 40%;
+  margin: 2% 0;
+  position: relative;
+}
+
+.right-column {
+  flex-direction: column;
+  flex: 0 40%;
+  justify-content: space-evenly;
+  padding: 2% 0;
+  display: flex;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 90px;
+  position: absolute;
+  bottom: 30%;
+  left: -280px;
+  transform: rotate(270deg);
+}
+
+.round-button {
+  color: #fff;
+  text-transform: uppercase;
+  width: 210px;
+  height: 210px;
+  z-index: 4;
+  background-color: #115173;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.description {
+  color: #fff;
+  text-align: left;
+  max-width: 330px;
+  font-size: 20px;
+}
+
+.visit-link {
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 24px;
+  text-decoration: none !important;
+}
+
+.mini {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  bottom: 15%;
+  right: -100px;
+}
+
+@media screen and (max-width: 800px) {
+  .mini {
+    width: 210px;
+    height: 140px;
+    position: absolute;
+    bottom: 15%;
+    right: -40px;
+  }
+
+  .section-heading {
+    font-size: 70px;
+    bottom: 36%;
+    left: -220px;
+  }
+
+  .round-button {
+    width: 140px;
+    height: 140px;
+    font-size: 21px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .mini {
+    width: 270px;
+    height: 180px;
+    position: absolute;
+    bottom: 15%;
+    right: -45px;
+  }
+
+  .section-heading {
+    bottom: 0;
+    transform: translateY(-230px)rotate(270deg);
+  }
+}
+
+/*# sourceMappingURL=our-work.b1047d84.css.map */
