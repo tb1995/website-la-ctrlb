@@ -513,13 +513,13 @@ let sections = (0, _gsapDefault.default).utils.toArray(".panel");
 (0, _scrollTriggerDefault.default).matchMedia({
     "(min-width: 800px)": function() {
         (0, _gsapDefault.default).to(sections, {
-            xPercent: -100 * (sections.length - 1),
+            xPercent: -400,
             ease: "none",
             scrollTrigger: {
                 trigger: ".container",
                 pin: true,
                 scrub: 1,
-                snap: 1 / (sections.length - 1),
+                snap: 0.25,
                 // base vertical scrolling on how wide the container is so it feels more natural.
                 end: "+=3500"
             }
