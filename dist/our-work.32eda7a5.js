@@ -510,18 +510,34 @@ var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 (0, _gsapDefault.default).registerPlugin((0, _scrollTriggerDefault.default));
 let sections = (0, _gsapDefault.default).utils.toArray(".panel");
-(0, _gsapDefault.default).to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".container",
-        pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        // base vertical scrolling on how wide the container is so it feels more natural.
-        end: "+=3500"
+(0, _scrollTriggerDefault.default).matchMedia({
+    "(min-width: 800px)": function() {
+        (0, _gsapDefault.default).to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".container",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (sections.length - 1),
+                // base vertical scrolling on how wide the container is so it feels more natural.
+                end: "+=3500"
+            }
+        });
     }
-}); // tl.to(".luxor", {
+}) // gsap.to(sections, {
+ //   xPercent: -100 * (sections.length - 1),
+ //   ease: "none",
+ //   scrollTrigger: {
+ //     trigger: ".container",
+ //     pin: true,
+ //     scrub: 1,
+ //     snap: 1 / (sections.length - 1),
+ //     // base vertical scrolling on how wide the container is so it feels more natural.
+ //     end: "+=3500",
+ //   }
+ // });
+ // tl.to(".luxor", {
  //     scrollTrigger: {
  //         trigger: '.luxor',
  //         start: "center center"
@@ -529,6 +545,7 @@ let sections = (0, _gsapDefault.default).utils.toArray(".panel");
  //     backgroundColor: "maroon",
  //     delay: 1
  // })
+;
 
 },{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","gsap/ScrollTrigger":"7wnFk"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

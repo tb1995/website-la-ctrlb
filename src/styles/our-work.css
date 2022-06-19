@@ -140,6 +140,7 @@ section {
 }
 
 
+
 @media screen and (max-width: 1100px) {
 
     .mini {
@@ -156,5 +157,116 @@ section {
     transform: translateY(-230px) rotate(270deg);
 
 }
+
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .mobile{
+     display: flex;
+     flex-direction: column;
+     width: 100vw;
+     height: fit-content;
+     padding-bottom: 30px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .left-right-container {
+        height: 350px;
+        width: 100vw;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+    .left-column {
+        height: 100%;
+        flex: 0 1 49%;
+        background-size: contain;
+    }
+
+    .right-column {
+        flex: 0 1 49%;
+        height: 100%;
+        position: static !important;
+        right: -100px;
+        bottom: 15%;
+        /* transform: translateY(-110%) translateX(100%); */
+    }
+
+    .mini {
+        position: static !important;
+        max-width: 120%;
+        transform: translateX(-15%);
+    }
+    .section-heading {
+        text-align: center;
+        transform: rotate(0deg);
+        font-size: 50px;
+        position: static ;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        letter-spacing: 7px;
+
+    }
+
+    .round-button {
+        transform: translateY(-40px);
+        height: 160px;
+        width: 160px;
+        margin: 0 auto;
+        margin-bottom: -10px;
+    }
+
+    .description {
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .visit-link {
+        margin: auto;
+        outline: 0;
+        text-decoration: none;
+        border: none;
+    }
+
+    .container {
+        overscroll-behavior: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
+
+
+
+
+/* TABLETS */
+
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+
+    .container {
+        overscroll-behavior: none;
+        width: 600% !important;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: hidden; 
+    }
+
+    .left-column {
+        background-size: auto;
+        background-position-x: -125px;
+    }
+    .right-column {
+        /* background-color: #ffd700; */
+    }
 
 }
