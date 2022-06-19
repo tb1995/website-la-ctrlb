@@ -18,24 +18,25 @@ section {
 
 
 
+
 .zoneomics {
     background-color: black;
 }
 
 .goldstar {
-    background-color: green;
+    /* background-color: green; */
 }
 
 .luxor {
-    background-color: purple;
+    /* background-color: purple; */
 }
 
 .loren {
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .nuage {
-    background-color: #ffd700;
+    /* background-color: #ffd700; */
 }
 
 .panel {
@@ -46,13 +47,30 @@ section {
 .left-column {
     flex: 0 1 40%;
     /* background-color: red; */
-    background-image: url("../images/zoneomics.jpg");
+    /* background-image: url("../images/zoneomics.jpg"); */
     background-size: cover;
     background-position-y: center;
     margin: 2% 0;
     position: relative;
 }
 
+.left-column-zoneomics {
+        background-image: url("../images/zoneomics.jpg");
+}
+
+.left-column-goldstar {
+        background-image: url("../images/goldstar.jpg");
+}
+
+.left-column-luxor {
+        background-image: url("../images/luxor.jpg");
+}
+.left-column-loren {
+        background-image: url("../images/loren.jpg");
+}
+.left-column-nuage {
+        background-image: url("../images/nuage.jpg");
+}
 .right-column {
     flex: 0 1 40%;
     /* background-color: green; */
@@ -272,6 +290,15 @@ section {
     }
     .right-column {
         /* background-color: #ffd700; */
+    }
+
+}
+
+
+@media screen and (min-width: 1600px) {
+
+    .desktop section .panel {
+        width: 125vw !important;
     }
 
 }

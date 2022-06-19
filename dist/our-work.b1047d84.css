@@ -21,34 +21,37 @@ section {
   background-color: #000;
 }
 
-.goldstar {
-  background-color: green;
-}
-
-.luxor {
-  background-color: purple;
-}
-
-.loren {
-  background-color: orange;
-}
-
-.nuage {
-  background-color: gold;
-}
-
 .panel {
   justify-content: space-evenly;
   display: flex;
 }
 
 .left-column {
-  background-image: url("zoneomics.f8ec6b0d.jpg");
   background-position-y: center;
   background-size: cover;
   flex: 0 40%;
   margin: 2% 0;
   position: relative;
+}
+
+.left-column-zoneomics {
+  background-image: url("zoneomics.f8ec6b0d.jpg");
+}
+
+.left-column-goldstar {
+  background-image: url("goldstar.e5b816a3.jpg");
+}
+
+.left-column-luxor {
+  background-image: url("luxor.109baf80.jpg");
+}
+
+.left-column-loren {
+  background-image: url("loren.54bd91b5.jpg");
+}
+
+.left-column-nuage {
+  background-image: url("nuage.fcfaee00.jpg");
 }
 
 .right-column {
@@ -245,6 +248,12 @@ section {
   .left-column {
     background-position-x: -125px;
     background-size: auto;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .desktop section .panel {
+    width: 125vw !important;
   }
 }
 
