@@ -237,6 +237,11 @@ section {
     width: 500% !important;
   }
 
+  .desktop {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
   .left-column {
     background-position-x: -125px;
     background-size: auto;

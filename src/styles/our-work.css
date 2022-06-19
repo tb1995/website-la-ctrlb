@@ -261,6 +261,11 @@ section {
         overflow-y: hidden; 
     }
 
+    .desktop {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
     .left-column {
         background-size: auto;
         background-position-x: -125px;
