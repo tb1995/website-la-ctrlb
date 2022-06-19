@@ -5,7 +5,7 @@ body {
 
 .container {
   overscroll-behavior: none;
-  width: 600%;
+  width: 500%;
   height: 100%;
   flex-wrap: nowrap;
   display: flex;
@@ -234,7 +234,7 @@ section {
     flex-wrap: nowrap;
     display: flex;
     overflow-y: hidden;
-    width: 600% !important;
+    width: 500% !important;
   }
 
   .left-column {
