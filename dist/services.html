@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ctrl B</title>
+		<meta name="description" content="Smooth WebGL Shader Transformations on Scroll – A handy setup to create a smooth scroll based GLSL animation using Three.js and GSAP. @Faboolea">
+		<meta name="keywords" content="webgl, three.js, on scroll, animation, three.js, gsap, javascript">
+		<meta name="author" content="ꜰᴀʙᴏᴏʟᴇᴀ for Codrops">
+		<link rel="shortcut icon" href="/favicon.824cf0c5.ico">
+		<link rel="stylesheet" type="text/css" href="/index.275a8ed3.css">
+        <link rel="stylesheet" type="text/css" href="/index.ea6ffa38.css">
+        <link rel="stylesheet" type="text/css" href="/services.bd277398.css">
+
+		<script>document.documentElement.className = "js";
+var supportsCssVars = function() {
+    var e, t = document.createElement("style");
+    return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="loading">
+		<main>
+			<div class="frame">
+				<div class="frame__title-wrap">
+					<h1 class="frame__title">CtrlB</h1>
+				</div>
+				<nav class="frame__links">
+					<a href="/our-work.html">Our Work</a>
+					<a href="#">Services</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
+			<div class="content">
+				<div class="scroll__stage">
+					<div class="scroll__content">
+						<section class="section left">
+							<div class="section__title">
+								<h1 class="section__title-number">Our Services</h1>
+								<h2 class="section__title-text"> 	</h2>
+								<p class="section__title-arrow">
+									<span>➤</span><br>
+									<span>➤</span>
+								</p>
+							</div>
+							<!-- <p class="section__paragraph">
+								We do bold work and we do it well.<br>
+								<a href="#" class="section__button">Discover</a>
+							</p> -->
+						</section>
+						<section class="section column align-items-left">
+							<div class="section__title order-1">
+								<h1 class="section__title-number"></h1>
+								<h2 class="section__title-text">Communications</h2>
+							</div>
+							<div class="section__paragraph order-2 align-self-left services-list">
+								<!-- Our work can be found around the world for a wide variety of clients covering different products and services in unique sectors. We provide cutting-edge digital marketing services that create a bold online presence for our customer.<br>
+                                <a href="#" class="section__button">Our Work</a> -->
+                                <div class="left-list">
+                                    <ul>
+                                        <li class="service-list">
+                                            <h3 class="service-list-title">Search Engine Marketing</h3>
+                                            <p class="service-list-description">
+                                                Optimized advertising campaigns on popular Search Engines like Google.
+                                            </p>
+                                        </li>
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Email Marketing</h3>
+                                            <p class="service-list-description">
+                                                Monthly newsletters or targeted email communications to your lists.
+                                            </p>
+                                        </li>
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Sales Collateral</h3>
+                                            <p class="service-list-description">
+                                                Specialized sales collateral including one-sheets and presentations.
+                                            </p>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="right-list">
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Social Media Communications</h3>
+                                            <p class="service-list-description">
+                                                Social media organic content visual and textual posts.
+                                            </p>
+                                        </li>
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Social Media Advertising</h3>
+                                            <p class="service-list-description">
+                                                Optimized advertising campaigns on relevant Social Media channels.
+                                            </p>
+                                        </li>
+                                </div>
+                            </div>
+						</section>
+						<section class="section">
+							<div class="section__title">
+								<h1 class="section__title-number"></h1>
+								<h2 class="section__title-text">DIGITAL DEVELOPMENT</h2>
+							</div>
+							<p class="section__paragraph services-list">
+							    </p><div class="left-list">
+                                    <ul>
+                                        <li class="service-list">
+                                            <h3 class="service-list-title">Search Engine Marketing</h3>
+                                            <p class="service-list-description">
+                                                Optimized advertising campaigns on popular Search Engines like Google.
+                                            </p>
+                                        </li>
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Email Marketing</h3>
+                                            <p class="service-list-description">
+                                                Monthly newsletters or targeted email communications to your lists.
+                                            </p>
+                                        </li>
+                                        <li class="service-list">
+                                             <h3 class="service-list-title">Sales Collateral</h3>
+                                            <p class="service-list-description">
+                                                Specialized sales collateral including one-sheets and presentations.
+                                            </p>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+							<p></p>
+							
+						</section>
+						<section class="section">
+							<div class="section__title">
+								<h1 class="section__title-number"></h1>
+								<h2 class="section__title-text">Strategy</h2>
+							</div>
+							<div>
+                            <h3 class="service-list-title">Marketing and Sales Strategy</h3>
+							<p class="contact-paragraph">Our expert team takes a data-driven and marketing savvy approach to guiding clients with their marketing and sales strategies to help them tap into their full growth potential using their digital touchpoints.</p>
+							<!-- <p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
+							<form class="section__paragraph">
+								<input class="form-field" type="text" placeholder="Name">
+								<input class="form-field" type="text" placeholder="Email">
+								<textarea class="form-field" type="text" placeholder="Text Area"></textarea>
+								<a href="#" class="section__button">Submit</a>
+							</form> -->
+							</div>
+						</section>
+						
+					</div>
+				</div>
+				<div class="layout__line"></div>
+			</div>
+		</main>
+		<script src="/index.cb43b74a.js" defer=""></script>
+		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+	</body>
+</html>

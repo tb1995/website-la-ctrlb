@@ -1,0 +1,52 @@
+.left {
+    justify-content: flex-start !important;
+}
+
+.order-1 {
+    order: 1
+}
+
+.order-2 {
+    order: 2;
+}
+
+.column {
+    flex-direction: column !important;
+}
+
+.align-self-left {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 60%;
+}
+
+.align-items-left {
+    align-items: flex-start;
+}
+/* .section:nth-child(2n) {
+    flex-direction: row;
+} */
+
+.service-list {
+    list-style-type: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.service-list-title {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.service-list-description {
+    font-weight: 300;
+    font-size: 27px;
+
+}
+
+.services-list {
+    display: flex;
+    /* flex-direction: column; */
+}

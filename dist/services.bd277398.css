@@ -1,0 +1,49 @@
+.left {
+  justify-content: flex-start !important;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.column {
+  flex-direction: column !important;
+}
+
+.align-self-left {
+  width: 100%;
+  max-width: 60%;
+  align-self: flex-start;
+}
+
+.align-items-left {
+  align-items: flex-start;
+}
+
+.service-list {
+  color: #fff;
+  flex-direction: column;
+  margin-bottom: 30px;
+  list-style-type: none;
+  display: flex;
+}
+
+.service-list-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.service-list-description {
+  font-size: 27px;
+  font-weight: 300;
+}
+
+.services-list {
+  display: flex;
+}
+
+/*# sourceMappingURL=services.bd277398.css.map */
