@@ -32,6 +32,35 @@
   display: flex;
 }
 
+@media screen and (max-width: 800px) {
+  .services-list {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-paragraph {
+    margin-top: 30px;
+    width: 100% !important;
+  }
+
+  .section__title {
+    width: 100%;
+    text-align: left !important;
+  }
+
+  .main__heading {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
 .service-list-title {
   font-size: 32px;
   font-weight: 700;

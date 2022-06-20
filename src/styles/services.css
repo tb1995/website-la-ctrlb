@@ -35,6 +35,36 @@
     margin-bottom: 30px;
 }
 
+@media screen and (max-width: 800px) {
+
+    .services-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .contact-paragraph {
+        width: 100% !important;
+        margin-top: 30px;
+    }
+
+    .section__title {
+        text-align: left !important;
+        width: 100%;
+    }
+
+    .main__heading {
+        height: 100vh;
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
 .service-list-title {
     font-weight: 700;
     font-size: 32px;
