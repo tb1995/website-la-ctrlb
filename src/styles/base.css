@@ -203,3 +203,17 @@ a:focus-visible {
 	}
 }
 
+.contact-section {
+	background-color: #115173 !important;
+}
+
+@media screen and (max-width: 800px) {
+	.contact-paragraph {
+		width: 90%;
+	}
+
+	.text-center-mobile {
+		text-align: left;
+		width: 100%;
+	}
+}
