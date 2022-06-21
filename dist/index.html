@@ -24,7 +24,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		<main>
 			<div class="frame">
 				<div class="frame__title-wrap">
-					<h1 class="frame__title">CtrlB</h1>
+					<a href="/"><h1 class="frame__title">CtrlB</h1></a>
 				</div>
 				<nav class="frame__links">
 					<a href="/our-work.html">Our Work</a>
@@ -47,13 +47,14 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 							</div>
 							<p class="section__paragraph">
 								We do bold work and we do it well.<br>
-								<a href="#" class="section__button">Discover</a>
+								<a href="#work" id="discover" class="section__button" onclick="discoverClick()">Discover</a>
 							</p>
+							<!-- onclick="document.getElementById('some-work').scrollIntoView(); " -->
 						</section>
 						<section class="section">
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
-								<h2 class="section__title-text">Some of the work we've done</h2>
+								<h2 class="section__title-text">Some work we've done</h2>
 							</div>
 							<p class="section__paragraph">
 								Our work can be found around the world for a wide variety of clients covering different products and services in unique sectors. We provide cutting-edge digital marketing services that create a bold online presence for our customer.<br>
@@ -71,7 +72,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 							</p>
 							
 						</section>
-						<section class="section">
+						<section class="section" id="work">
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Contact</h2>

@@ -515,6 +515,9 @@ var _vertexGlsl = require("./shaders/vertex.glsl");
 var _vertexGlslDefault = parcelHelpers.interopDefault(_vertexGlsl);
 var _fragmentGlsl = require("./shaders/fragment.glsl");
 var _fragmentGlslDefault = parcelHelpers.interopDefault(_fragmentGlsl);
+function discoverClick() {
+    alert("yipeekaiyay motherfucker");
+}
 class ScrollStage {
     constructor(){
         this.element = document.querySelector(".content");

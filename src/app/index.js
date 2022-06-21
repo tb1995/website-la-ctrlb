@@ -7,6 +7,10 @@ import SmoothScroll from './SmoothScroll'
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
 
+function discoverClick() {
+  alert("yipeekaiyay motherfucker")
+}
+
 class ScrollStage {
   constructor() {
     this.element = document.querySelector('.content')
@@ -266,3 +270,5 @@ class ScrollStage {
 new ScrollStage()
 
 // console.log('%c Made by ꜰᴀʙᴏᴏʟᴇᴀ → https://twitter.com/faboolea', 'background: black; color: white; padding: 1ch 2ch; border-radius: 2rem;')
+
+

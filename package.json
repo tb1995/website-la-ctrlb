@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "gsap": "3.10.4",
+    "jquery": "^3.6.0",
     "three": "^0.129.0"
   }
 }

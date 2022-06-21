@@ -217,3 +217,8 @@ a:focus-visible {
 		width: 100%;
 	}
 }
+
+
+html {
+  scroll-behavior: smooth;
+ }
