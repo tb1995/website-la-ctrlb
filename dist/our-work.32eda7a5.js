@@ -508,6 +508,9 @@ var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
+function discoverClick() {
+    alert("yipeekaiyay motherfucker");
+}
 (0, _gsapDefault.default).registerPlugin((0, _scrollTriggerDefault.default));
 let sections = (0, _gsapDefault.default).utils.toArray(".panel");
 (0, _scrollTriggerDefault.default).matchMedia({

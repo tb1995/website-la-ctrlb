@@ -1,6 +1,10 @@
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+function discoverClick() {
+  alert("yipeekaiyay motherfucker")
+}
+
 
 gsap.registerPlugin(ScrollTrigger);
 

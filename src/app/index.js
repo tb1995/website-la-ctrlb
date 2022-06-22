@@ -7,9 +7,12 @@ import SmoothScroll from './SmoothScroll'
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
 
-function discoverClick() {
-  alert("yipeekaiyay motherfucker")
-}
+
+// jQuery.noConflict();
+//      // Use jQuery via jQuery() instead of via $()
+//      jQuery(document).ready(function(){
+//         alert("yipeekaiyay motherfucker")
+//      });  
 
 class ScrollStage {
   constructor() {

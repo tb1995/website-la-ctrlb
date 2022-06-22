@@ -30,7 +30,7 @@ section {
   background-position-y: center;
   background-size: cover;
   flex: 0 40%;
-  margin: 2% 0;
+  margin: 4% 0 0;
   position: relative;
 }
 
@@ -248,6 +248,16 @@ section {
   .left-column {
     background-position-x: -125px;
     background-size: auto;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1600px) {
+  .right-column {
+    margin-left: 80px;
+  }
+
+  .zoneomics-heading {
+    bottom: 40%;
   }
 }
 

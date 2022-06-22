@@ -50,7 +50,8 @@ section {
     /* background-image: url("../images/zoneomics.jpg"); */
     background-size: cover;
     background-position-y: center;
-    margin: 2% 0;
+    margin: 4% 0;
+    margin-bottom: 0;
     position: relative;
 }
 
@@ -291,6 +292,19 @@ section {
     .right-column {
         /* background-color: #ffd700; */
     }
+
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1600px) {
+
+    .right-column {
+        margin-left: 80px;
+    }
+
+    .zoneomics-heading {
+        bottom: 40%;
+    }
+
 
 }
 
