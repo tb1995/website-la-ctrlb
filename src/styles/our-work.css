@@ -23,20 +23,40 @@ section {
     background-color: black;
 }
 
+.zoneomics-circle {
+    background-color: #026ff8 !important;
+}
+
 .goldstar {
     /* background-color: green; */
+}
+
+.goldstar-circle {
+    background-color: #008CD3 !important;
 }
 
 .luxor {
     /* background-color: purple; */
 }
 
+.luxor-circle {
+    background-color: #55B0E8 !important;
+}
+
 .loren {
     /* background-color: orange; */
 }
 
+.loren-circle {
+    background-color: #EB8B2D !important;
+}
+
 .nuage {
     /* background-color: #ffd700; */
+}
+
+.nuage-circle {
+    background-color: #ffc42e !important;
 }
 
 .panel {
@@ -86,10 +106,11 @@ section {
     text-transform: uppercase;
     font-size: 90px;
     position: absolute;
-    left: -280px;
+    /* left: -280px; */
     bottom: 30%;
     letter-spacing: 10px;
     transform: rotate(270deg);
+    width: 0;
 }
 
 .round-button {
@@ -304,9 +325,9 @@ section {
     .zoneomics-heading {
         bottom: 40%;
     }
-
-
 }
+
+
 
 
 @media screen and (min-width: 1600px) {
@@ -315,4 +336,7 @@ section {
         width: 125vw !important;
     }
 
+    .section-heading { 
+        bottom: 10%;
+    }
 }

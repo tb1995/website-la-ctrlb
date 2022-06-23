@@ -21,6 +21,26 @@ section {
   background-color: #000;
 }
 
+.zoneomics-circle {
+  background-color: #026ff8 !important;
+}
+
+.goldstar-circle {
+  background-color: #008cd3 !important;
+}
+
+.luxor-circle {
+  background-color: #55b0e8 !important;
+}
+
+.loren-circle {
+  background-color: #eb8b2d !important;
+}
+
+.nuage-circle {
+  background-color: #ffc42e !important;
+}
+
 .panel {
   justify-content: space-evenly;
   display: flex;
@@ -65,10 +85,10 @@ section {
 .section-heading {
   text-transform: uppercase;
   letter-spacing: 10px;
+  width: 0;
   font-size: 90px;
   position: absolute;
   bottom: 30%;
-  left: -280px;
   transform: rotate(270deg);
 }
 
@@ -264,6 +284,10 @@ section {
 @media screen and (min-width: 1600px) {
   .desktop section .panel {
     width: 125vw !important;
+  }
+
+  .section-heading {
+    bottom: 10%;
   }
 }
 
