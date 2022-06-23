@@ -522,7 +522,7 @@ let sections = (0, _gsapDefault.default).utils.toArray(".panel");
                 trigger: ".container",
                 pin: true,
                 scrub: 1,
-                snap: 0.25,
+                // snap: 1 / (5 - 1),
                 // base vertical scrolling on how wide the container is so it feels more natural.
                 end: "+=3500"
             }

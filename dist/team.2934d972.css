@@ -12,7 +12,23 @@
 }
 
 .team {
+  opacity: 1;
+  z-index: 99999;
   background-color: #115173;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  z-index: 55;
+  background-color: #f000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.webgl {
+  z-index: 30 !important;
 }
 
 .headline {
@@ -94,9 +110,14 @@
 .small-banner {
   height: 20vh;
   width: 100vw;
-  background-color: #000;
+  z-index: 1;
+  background-color: #0000;
   justify-content: space-evenly;
   display: flex;
+}
+
+#transparent-overlay {
+  background-color: #115173cc !important;
 }
 
 .text-content-small-banner {

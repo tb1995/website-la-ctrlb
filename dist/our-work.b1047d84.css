@@ -287,8 +287,43 @@ section {
   }
 
   .section-heading {
-    bottom: 10%;
+    bottom: 1%;
   }
+}
+
+@media screen and (max-height: 1100px) and (min-width: 1600px) {
+  .section-heading {
+    bottom: -3%;
+  }
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-bottom: none;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.no-border:not(:first-child) {
+  margin-left: 5px;
+}
+
+.no-border {
+  border-bottom: none;
+}
+
+.no-border:hover {
+  border-bottom: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.active-dot {
+  width: 19px;
+  background-color: #777;
+  border-radius: 45%;
 }
 
 /*# sourceMappingURL=our-work.b1047d84.css.map */

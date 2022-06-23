@@ -21,7 +21,7 @@ ScrollTrigger.matchMedia({
         trigger: ".container",
         pin: true,
         scrub: 1,
-        snap: 1 / (5 - 1),
+        // snap: 1 / (5 - 1),
         // base vertical scrolling on how wide the container is so it feels more natural.
         end: "+=3500",
       }

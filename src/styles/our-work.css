@@ -337,6 +337,46 @@ section {
     }
 
     .section-heading { 
-        bottom: 10%;
+        bottom: 1%;
     }
+}
+
+
+@media screen and (max-height: 1100px)  and (min-width: 1600px) {
+
+    .section-heading { 
+        bottom: -3%;
+    }
+
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  border-bottom: none;
+  
+}
+
+ .no-border:not(:first-child) {
+    margin-left: 5px;
+}
+
+.no-border {
+    border-bottom: none;
+}
+
+.no-border:hover {
+    text-decoration: none;
+    outline: none;
+    border-bottom: none;
+}
+
+.active-dot {
+    background-color: #777;
+    width: 19px;
+    border-radius: 45%;
 }
