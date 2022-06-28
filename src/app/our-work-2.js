@@ -3,27 +3,44 @@ var goldstarPanel = document.getElementById("goldstar-panel");
 var luxorPanel = document.getElementById("luxor-panel");
 var lorenPanel = document.getElementById("loren-panel");
 var nuagePanel = document.getElementById("nuage-panel");
+var container = document.getElementById("container")
 
 
+var windowWidth = 0;
 
 function clickSelectors(event, selector) {
+    windowWidth = window.innerWidth;
+    console.log(windowWidth)
     event.preventDefault()
     console.log(selector)
-    if(selector === "zoneomics") {
+    if(selector === "zoneomics") {          
 
         zoneomicsPanel.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         // console.log(goldstarPanel)
+        if(windowWidth < 2000) {
         window.scrollTo({
             top: window.innerWidth * 0.0001
     })
+    } else if(windowWidth > 5000) {
+        window.scrollTo({
+            top: window.innerWidth * 0.0001
+    })
+    }
 
 
     } else if (selector === "goldstar") {
-        goldstarPanel.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        goldstarPanel.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
         // console.log(goldstarPanel)
+         if(windowWidth < 2000) {
         window.scrollTo({
             top: window.innerWidth / 2
     })
+    } else if(windowWidth > 5000) {
+        console.log("here")
+        window.scrollTo({
+            top: 1760
+    })
+    }
 
     } else if (selector === "luxor") {
         // console.log("testtest")
@@ -52,3 +69,6 @@ function clickSelectors(event, selector) {
     }
 
 }
+
+
+
