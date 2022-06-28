@@ -10,6 +10,8 @@ var container = document.getElementById("container")
 
 
 var windowWidth = 0;
+let scroll_to = 0;
+let maxScrollerWidth = container.offsetWidth - innerWidth;
 
 function clickSelectors(event, selector) {
     windowWidth = window.innerWidth;

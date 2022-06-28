@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import $, { event } from 'jquery'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
 
 var zoneomicsPanel = document.getElementById("zoneomics-panel");
@@ -52,6 +53,21 @@ $(document).ready(function () {
 
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
+let scrollWidth;
+function createScroller() {
+  scrollWidth = container.offsetWidth - innerWidth;
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    scrollWidth = container.offsetWidth - innerWidth;
+    gsap.set(document.body, {height: scrollWidth + innerHeight});
+  });
+}
+
+createScroller();
+var triggerAmount = 0;
+
+
 
 let sections = gsap.utils.toArray(".panel");
 
@@ -69,6 +85,7 @@ ScrollTrigger.matchMedia({
         // snap: 1 / (5 - 1),
         // base vertical scrolling on how wide the container is so it feels more natural.
         end: "+=3500",
+        onUpdate: trigger => triggerAmount = trigger.progress
       }
     });
 
@@ -98,3 +115,64 @@ ScrollTrigger.matchMedia({
     
 // })
 
+
+
+let scroll_to = 0;
+let maxScrollerWidth = container.offsetWidth - innerWidth;
+
+
+function slideAnim(e) {
+  console.log("test")
+  e.preventDefault();
+  
+  // NAVIGATION BUTTONS. 
+  // Should move by +/- three sections
+  
+  // First, check to see if we've used the mousewheel
+  // If we have, then we need to update the scroll_to position
+  // so it matches how far we might have moved with scroll trigger
+  // multiply that by total moveable width to get approximate px width
+  // we can then add or subtract that from scroll_to
+  triggerMoved = Math.floor(triggerAmount * scrollWidth);
+  
+  // NEXT
+  if( $(this).hasClass("navi--next") ){
+    // console.log(" triggerMoved: " + triggerMoved)
+    // console.log(" triggerAmount: " + triggerAmount)
+    // console.log(" maxScrollerWidth: " + maxScrollerWidth)
+    console.log(" innerWidth: " + innerWidth)
+    // console.log(" : " + )
+    // console.log(" : " + )
+
+    
+    // check to see if we can move three sections forward (right)
+    if ((scroll_to + innerWidth) < maxScrollerWidth) {
+      
+      // scroll_to + screen width is less than overall moveable width
+      // so lets set scroll_to = trigger position + screenwidth
+      scroll_to = innerWidth / 2;
+      console.log("here")
+      
+    } else {
+      
+      // scroll_to + screen width is more than overall moveable width
+      // so we can just go to right to the end
+      // scroll_to = maxScrollerWidth;
+            scroll_to = innerWidth / 8;
+
+            console.log("or here")
+
+    }
+    
+  }
+
+   nav_tl = gsap.timeline();
+  
+  nav_tl.to(window, {
+    duration: 0.05, 
+    // ease:"power4.out",
+    scrollTo: scroll_to
+  });
+}
+
+document.querySelector(".navi--next").addEventListener("click", slideAnim);
