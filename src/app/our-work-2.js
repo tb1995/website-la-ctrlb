@@ -6,6 +6,9 @@ var nuagePanel = document.getElementById("nuage-panel");
 var container = document.getElementById("container")
 
 
+
+
+
 var windowWidth = 0;
 
 function clickSelectors(event, selector) {
@@ -21,11 +24,12 @@ function clickSelectors(event, selector) {
         window.scrollTo({
             top: window.innerWidth * 0.0001
     })
-    } else if(windowWidth > 5000) {
-        window.scrollTo({
-            top: window.innerWidth * 0.0001
-    })
-    }
+    } 
+    // else if(windowWidth > 5000) {
+    //     window.scrollTo({
+    //         top: window.innerWidth * 0.0001
+    // })
+    // }
 
 
     } else if (selector === "goldstar") {
@@ -37,38 +41,42 @@ function clickSelectors(event, selector) {
     })
     } else if(windowWidth > 5000) {
         console.log("here")
-        window.scrollTo({
-            top: 1760
-    })
+    //     document.getElementById('container').scrollTo({
+    //         left: 17600
+    // })
     }
 
     } else if (selector === "luxor") {
         // console.log("testtest")
         luxorPanel.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         // console.log(goldstarPanel)
+         if(windowWidth < 2000) {
         window.scrollTo({
             top: window.innerWidth * 0.95
     })
+}
 
     } else if (selector === "loren") {
         // console.log("testtest")
         lorenPanel.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         // console.log(goldstarPanel)
+         if(windowWidth < 2000) {
         window.scrollTo({
             top: window.innerWidth * 1.45
     })
+}
 
     } else if (selector === "nuage") {
-        // console.log("testtest")
         nuagePanel.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         // console.log(goldstarPanel)
+         if(windowWidth < 2000) {
         window.scrollTo({
-            top: window.innerWidth * 2
+            top: window.innerWidth * 99
     })
+}
 
     }
 
 }
-
 
 

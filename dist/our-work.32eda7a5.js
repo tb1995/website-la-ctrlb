@@ -519,6 +519,19 @@ var container = document.getElementById("container");
 function discoverClick() {
     alert("yipeekaiyay motherfucker");
 }
+// $(document).ready(function() {
+//    $('#goldstar-circle').on('click', function() {
+//      console.log("test")
+//     //  event.preventDefault();
+//       // $('.container').animate({scrollLeft: $('#goldstar-panel').position().left}, 1500);
+//     //   $('.container').animate({
+//     //     scrollLeft: $("#goldstar-panel").offset().left
+//     // }, 2000);
+//    $('window').animate({scrollTop: $('#luxor-panel').position().top}, 1500);
+//     // document.getElementById('container').scrollTop += 500;
+//     // $(".container")[0].scrollTo(500, 800);
+//    })
+// })
 (0, _jqueryDefault.default)(document).ready(function() {
     // alert("test")
     var $horizontal = (0, _jqueryDefault.default)("#goldstar-panel");
