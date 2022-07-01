@@ -23,6 +23,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 	</head>
 	<body class="loading">
+		<div id="overlay">
 		<main>
 				<div class="frame">
 				<div class="frame__title-wrap">
@@ -52,7 +53,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 								<a href="#" class="section__button">Discover</a>
 							</p> -->
 						</section>
-						<section class="section column align-items-left">
+						<section class="section column align-items-left transparent-overlay">
 							<div class="section__title order-1">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Communications</h2>
@@ -131,7 +132,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 							<p></p>
 							
 						</section>
-						<section class="section">
+						<section class="section transparent-overlay">
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Strategy</h2>
@@ -148,6 +149,25 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 							</form> -->
 							</div>
 						</section>
+
+						
+							<section class="section contact-section transparent-overlay">
+                                    <div class="section__title">
+                                        <h1 class="section__title-number"></h1>
+                                        <h2 class="section__title-text text-center-mobile">Contact</h2>
+                                    </div>
+                                    <div>
+                                    <p class="contact-paragraph">Interested in taking a <strong>bold</strong> step for your brand?</p>
+                                    <p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
+                                    <form class="section__paragraph">
+                                        <input class="form-field" type="text" placeholder="Name">
+                                        <input class="form-field" type="text" placeholder="Email">
+                                        <textarea class="form-field" type="text" placeholder="Add a message"></textarea>
+                                        <a href="#" class="section__button">Submit</a>
+                                    </form>
+                                    </div>
+								</section>
+								
 						
 					</div>
 				</div>
@@ -156,5 +176,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		</main>
 		<script src="/index.cb43b74a.js" defer=""></script>
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+		</div>
 	</body>
+	
 </html>

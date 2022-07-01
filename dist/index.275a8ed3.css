@@ -213,4 +213,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.transparent-overlay {
+  background-color: #115173cc !important;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  z-index: 55;
+  background-color: #f000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.webgl {
+  z-index: 30 !important;
+}
+
 /*# sourceMappingURL=index.275a8ed3.css.map */

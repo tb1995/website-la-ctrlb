@@ -14,6 +14,7 @@
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 	</head>
 	<body class="loading">
+		<div id="overlay">
 		<main>
 			<div class="frame">
 				<div class="frame__title-wrap">
@@ -45,7 +46,7 @@
 							</p>
 							<!-- onclick="document.getElementById('some-work').scrollIntoView(); " -->
 						</section>
-						<section class="section" id="work">
+						<section class="section transparent-overlay" id="work">
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Some work we've done</h2>
@@ -66,7 +67,7 @@
 							</p>
 							
 						</section>
-						<section class="section" >
+						<section class="section transparent-overlay" >
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Contact</h2>
@@ -90,6 +91,9 @@
 		</main>
 		<script type="module" src="./app/index.js"></script>
 		<script src="./app/other-stuff.js"></script>
+		
+
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+		</div>
 	</body>
 </html>

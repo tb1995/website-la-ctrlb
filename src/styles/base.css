@@ -222,3 +222,22 @@ a:focus-visible {
 html {
   scroll-behavior: smooth;
  }
+
+ .transparent-overlay {
+    background-color: rgba(17,81,115, 0.8) !important;
+}
+
+
+#overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 55;
+}
+
+.webgl {
+    z-index: 30 !important;
+}

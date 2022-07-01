@@ -1,13 +1,15 @@
 body {
   overscroll-behavior: none;
-  height: 100vh;
+  /* height: 100vh; */
+  max-height: 100vh;
 }
 .container {
   overscroll-behavior: none;
   width: 500%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
+  overflow-y: hidden; 
 }
 section {   
     height: 100vh;
@@ -379,4 +381,9 @@ section {
     background-color: #777;
     width: 19px;
     border-radius: 45%;
+}
+
+
+.rotated {
+    transform: rotate(180deg);
 }

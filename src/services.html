@@ -16,6 +16,7 @@
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 	</head>
 	<body class="loading">
+		<div id="overlay">
 		<main>
 				<div class="frame">
 				<div class="frame__title-wrap">
@@ -45,7 +46,7 @@
 								<a href="#" class="section__button">Discover</a>
 							</p> -->
 						</section>
-						<section class="section column align-items-left">
+						<section class="section column align-items-left transparent-overlay">
 							<div class="section__title order-1">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Communications</h2>
@@ -124,7 +125,7 @@
 							</p>
 							
 						</section>
-						<section class="section">
+						<section class="section transparent-overlay">
 							<div class="section__title">
 								<h1 class="section__title-number"></h1>
 								<h2 class="section__title-text">Strategy</h2>
@@ -141,6 +142,25 @@
 							</form> -->
 							</div>
 						</section>
+
+						
+							<section class="section contact-section transparent-overlay">
+                                    <div class="section__title">
+                                        <h1 class="section__title-number"></h1>
+                                        <h2 class="section__title-text text-center-mobile">Contact</h2>
+                                    </div>
+                                    <div>
+                                    <p class="contact-paragraph">Interested in taking a <strong>bold</strong> step for your brand?</p>
+                                    <p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
+                                    <form class="section__paragraph">
+                                        <input class="form-field" type="text" placeholder="Name">
+                                        <input class="form-field" type="text" placeholder="Email">
+                                        <textarea class="form-field" type="text" placeholder="Add a message"></textarea>
+                                        <a href="#" class="section__button">Submit</a>
+                                    </form>
+                                    </div>
+								</section>
+								
 						
 					</div>
 				</div>
@@ -149,5 +169,7 @@
 		</main>
 		<script type="module" src="./app/index.js"></script>
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+		</div>
 	</body>
+	
 </html>

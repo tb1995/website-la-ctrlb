@@ -15,6 +15,10 @@ function discoverClick() {
   alert("yipeekaiyay motherfucker")
 }
 
+window.addEventListener('scroll', function(){
+  console.log(scrollY)
+})
+
 // $(document).ready(function() {
          
 
@@ -122,6 +126,12 @@ let maxScrollerWidth = container.offsetWidth - innerWidth;
 
 
 function slideAnim(e) {
+  // console.log("Zone Panel Width = " + zoneomicsPanel.offsetWidth)
+  // console.log("Gold Panel Width = " + goldstarPanel.offsetWidth)
+  // console.log("Luxor Panel Width = " + luxorPanel.offsetWidth)
+  // console.log("Loren Panel Width = " + lorenPanel.offsetWidth)
+  // console.log("Zone Panel Width = " + zoneomicsPanel.offsetWidth)
+  console.log("Zone Panel Width = " + zoneomicsPanel.offsetWidth)
   console.log("test")
   e.preventDefault();
   
@@ -134,9 +144,10 @@ function slideAnim(e) {
   // multiply that by total moveable width to get approximate px width
   // we can then add or subtract that from scroll_to
   triggerMoved = Math.floor(triggerAmount * scrollWidth);
-  
+    let largerDesktopScroll = 910
+    let smallerDesktopScroll = 900;
   // NEXT
-  if( $(this).hasClass("navi--next") ){
+  if( $(this).hasClass("navi--next")){
     // console.log(" triggerMoved: " + triggerMoved)
     // console.log(" triggerAmount: " + triggerAmount)
     // console.log(" maxScrollerWidth: " + maxScrollerWidth)
@@ -146,25 +157,131 @@ function slideAnim(e) {
 
     
     // check to see if we can move three sections forward (right)
-    if ((scroll_to + innerWidth) < maxScrollerWidth) {
+    // if ((scroll_to + innerWidth) < maxScrollerWidth) {
       
-      // scroll_to + screen width is less than overall moveable width
-      // so lets set scroll_to = trigger position + screenwidth
-      scroll_to = innerWidth / 2;
-      console.log("here")
+    //   // scroll_to + screen width is less than overall moveable width
+    //   // so lets set scroll_to = trigger position + screenwidth
+    //   scroll_to = innerWidth / 2;
+    //   console.log("here")
       
+    // } else {
+      
+    //   // scroll_to + screen width is more than overall moveable width
+    //   // so we can just go to right to the end
+    //   // scroll_to = maxScrollerWidth;
+    //         scroll_to = innerWidth / 7.4;
+    //         console.log("or here")
+
+    // }
+
+  
+    if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = largerDesktopScroll  ;
+     console.log("scroll_TO: " + scroll_to)
     } else {
-      
-      // scroll_to + screen width is more than overall moveable width
-      // so we can just go to right to the end
-      // scroll_to = maxScrollerWidth;
-            scroll_to = innerWidth / 8;
-
-            console.log("or here")
-
+        scroll_to = smallerDesktopScroll  ;
+     console.log("scroll_TO: " + scroll_to)
     }
+    //  else if (zoneomicsPanel.offsetWidth > 1500) {
+
+    // }
     
+  } else if ( $(this).hasClass("navi--prev1")) {
+
+    if(zoneomicsPanel.offsetWidth > 1700) {
+           console.log("here")
+        scroll_to = 0 ;  
+       } else {
+          console.log("here actually")
+          scroll_to = 0 ;  
+       }
+       
+
+  } else if ( $(this).hasClass("navi--next2")) {
+      //  if ((scroll_to + innerWidth) < maxScrollerWidth) {
+      //   scroll_to = innerWidth / 1.01;
+      //  } else {
+      //   scroll_to = innerWidth / 3.7;
+      //  }
+
+      //   scroll_to = zoneomicsPanel.offsetWidth * 2 ;
+
+       if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = (largerDesktopScroll - 20) * 2  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = (smallerDesktopScroll - 10) * 2 ;
+     console.log("scroll_TO: " + scroll_to)
+    }
   }
+
+  else if ( $(this).hasClass("navi--prev2")) {
+
+        if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = largerDesktopScroll  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = smallerDesktopScroll ;
+     console.log("scroll_TO: " + scroll_to)
+    }
+  } else if ( $(this).hasClass("navi--next3")) {
+      //  if ((scroll_to + innerWidth) < maxScrollerWidth) {
+      //   // scroll_to = innerWidth / 1.01;
+      //   console.log("here")
+
+      //   scroll_to += innerWidth / 0.75
+      //  } else {
+      //   console.log("here actually")
+        // scroll_to = zoneomicsPanel.offsetWidth * 3 ;
+      // }
+
+
+       if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = (largerDesktopScroll - 20) * 3  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = (smallerDesktopScroll - 15) * 3 ;
+     console.log("scroll_TO: " + scroll_to)
+    }
+  }   else if ( $(this).hasClass("navi--prev3")) {
+
+           if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = (largerDesktopScroll - 20) * 2  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = (smallerDesktopScroll - 10) * 2 ;
+     console.log("scroll_TO: " + scroll_to)
+    }
+  } else if ( $(this).hasClass("navi--next4")) {
+      //  if ((scroll_to + innerWidth) < maxScrollerWidth) {
+      //   // scroll_to = innerWidth / 1.01;
+      //   console.log("here")
+
+      //   scroll_to += innerWidth / 0.75
+      //  } else {
+      //   console.log("here actually")
+        // scroll_to = zoneomicsPanel.offsetWidth * 3 ;
+      // }
+
+
+       if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = (largerDesktopScroll - 20) * 4  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = (smallerDesktopScroll - 15) * 4 ;
+     console.log("scroll_TO: " + scroll_to)
+    }
+  }  else if ( $(this).hasClass("navi--prev4")) {
+
+           if(zoneomicsPanel.offsetWidth > 1700) {
+     scroll_to = (largerDesktopScroll - 20) * 3  ;
+     console.log("scroll_TO: " + scroll_to)
+    } else {
+      scroll_to = (smallerDesktopScroll - 15) * 3 ;
+     console.log("scroll_TO: " + scroll_to)
+    }
+  }
+
 
    nav_tl = gsap.timeline();
   
@@ -176,3 +293,10 @@ function slideAnim(e) {
 }
 
 document.querySelector(".navi--next").addEventListener("click", slideAnim);
+document.querySelector(".navi--next2").addEventListener("click", slideAnim);
+document.querySelector(".navi--prev1").addEventListener("click", slideAnim);
+document.querySelector(".navi--next3").addEventListener("click", slideAnim);
+document.querySelector(".navi--prev2").addEventListener("click", slideAnim);
+document.querySelector(".navi--next4").addEventListener("click", slideAnim);
+document.querySelector(".navi--prev3").addEventListener("click", slideAnim);
+document.querySelector(".navi--prev4").addEventListener("click", slideAnim);
