@@ -1,7 +1,7 @@
 body {
   overscroll-behavior: none;
   /* height: 100vh; */
-  max-height: 100vh;
+  
 }
 .container {
   overscroll-behavior: none;
@@ -327,6 +327,10 @@ section {
     .zoneomics-heading {
         bottom: 8%;
     }
+
+    body {
+        max-height: 100vh;
+    }
 }
 
 
@@ -340,6 +344,10 @@ section {
 
     .section-heading { 
         bottom: 1%;
+    }
+
+     body {
+        max-height: 100vh;
     }
 }
 

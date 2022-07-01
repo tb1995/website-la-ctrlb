@@ -1,6 +1,5 @@
 body {
   overscroll-behavior: none;
-  max-height: 100vh;
 }
 
 .container {
@@ -280,6 +279,10 @@ section {
   .zoneomics-heading {
     bottom: 8%;
   }
+
+  body {
+    max-height: 100vh;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -289,6 +292,10 @@ section {
 
   .section-heading {
     bottom: 1%;
+  }
+
+  body {
+    max-height: 100vh;
   }
 }
 
