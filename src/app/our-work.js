@@ -283,7 +283,7 @@ function slideAnim(e) {
   }
 
 
-   nav_tl = gsap.timeline();
+  let nav_tl = gsap.timeline();
   
   nav_tl.to(window, {
     duration: 0.05, 
