@@ -1,0 +1,57 @@
+ .navbar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        align-items: center;
+        height: 100px;
+    }
+
+    .logo {
+        width: 8%;
+        margin-left: 5%;
+
+    }
+    .nav-btn {
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        margin-right: 10%;
+        z-index: 2;
+        display: flex;
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .nav-btn span {
+
+        width: 20px;
+        height: 2px;
+        background: #000;
+        display: flex;
+        position: absolute;
+        transition: .3s;
+        z-index: 2;
+    }
+
+    .nav-btn span:nth-child(1) {
+        top: 20%;
+    }
+
+    .nav-btn span:nth-child(2) {
+        top: 80%;
+    }
+
+    .nav-btn.is-active span {
+        background: #fff;
+    }
+    .nav-btn.is-active span:nth-child(1) {
+        top: 50%;
+        transform: rotate(-45deg);
+        
+    }
+
+    .nav-btn.nav-btn.is-active span:nth-child(2) {
+        top: 50%;
+        transform: rotate(45deg);
+    }

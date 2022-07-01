@@ -143,7 +143,7 @@ function slideAnim(e) {
   // so it matches how far we might have moved with scroll trigger
   // multiply that by total moveable width to get approximate px width
   // we can then add or subtract that from scroll_to
-  triggerMoved = Math.floor(triggerAmount * scrollWidth);
+  // triggerMoved = Math.floor(triggerAmount * scrollWidth);
     let largerDesktopScroll = 910
     let smallerDesktopScroll = 900;
   // NEXT
