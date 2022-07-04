@@ -9,6 +9,7 @@
     .logo {
         width: 8%;
         margin-left: 5%;
+         z-index: 100;
 
     }
     .nav-btn {
@@ -20,14 +21,20 @@
         display: flex;
         width: 20px;
         height: 20px;
+        border-bottom: none;
 
+    }
+
+    .nav-btn:hover {
+        text-decoration: none;
+        border-bottom: none;
     }
 
     .nav-btn span {
 
         width: 20px;
         height: 2px;
-        background: #000;
+        background: #fff;
         display: flex;
         position: absolute;
         transition: .3s;
@@ -43,7 +50,7 @@
     }
 
     .nav-btn.is-active span {
-        background: #fff;
+        background: #000;
     }
     .nav-btn.is-active span:nth-child(1) {
         top: 50%;
@@ -55,3 +62,103 @@
         top: 50%;
         transform: rotate(45deg);
     }
+
+
+
+    @media screen and (max-width: 800px) {
+
+        .logo {
+            width: 18%;
+           
+        }
+
+        .menu {
+            padding: 50px !important;
+        }
+
+        .menu__link a{
+            text-align: center;
+        }
+
+        .nav-btn {
+            margin-top: 10px;
+            margin-right: 0;
+        }
+    }
+
+/*
+ * Fullscreen Nav CSS
+ *
+ */
+
+
+.menu { 
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 100px;
+    z-index: 1;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu.fullscreen-is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menu__link:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.menu__link {
+    position: relative;
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 48px;
+    color: #115173;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.menu__link a{
+    color:#115173;
+    border-bottom: none;
+}
+
+.menu__link a:hover {
+    text-decoration: none !important;
+}
+
+.menu__link:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    display: inline-flex;
+    background: #ffd700;
+    transition: .3s;
+        text-decoration: none;
+
+}
+
+.menu__link:hover:after {
+    width: 100%;
+        text-decoration: none;
+
+}
