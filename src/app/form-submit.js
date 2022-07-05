@@ -1,7 +1,7 @@
 function formSubmission(name, email, message) {
 
     let data = {
-        to: "tb1995@gmail.com",
+        to: "talha@ctrlb.io",
         subject: "A form was submitted on the CtrlB website",
         message : `Name: ` + name + `\nEmail: `+ email + `\nMessage : ` + message
         }
