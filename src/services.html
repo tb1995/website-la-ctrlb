@@ -10,7 +10,8 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="./styles/base.css" />
         <link rel="stylesheet" type="text/css" href="./styles/shaders-on-scroll.sass" />
-        <link rel="stylesheet" type="text/css" href="./styles/services.css" />
+		<link rel="stylesheet" type="text/css" href="./styles/services.css" />
+		<link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
 
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
@@ -18,7 +19,7 @@
 	<body class="loading">
 		<div id="overlay">
 		<main>
-				<div class="frame">
+				<!-- <div class="frame">
 				<div class="frame__title-wrap">
 					<a href="/"><h1 class="frame__title">CtrlB</h1></a>
 				</div>
@@ -28,6 +29,37 @@
 					<a href="./team.html">Team</a>
 					<a href="#">Contact</a>
 				</nav>
+			</div> -->
+				<!--  Navbar banner -->
+			<div class="navbar">
+			<img src="./images/ctrlb.png" alt="" class="logo">
+			<a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)" >
+				<span></span>
+				<span></span>
+			</a>
+			</div>
+
+			<!-- Full Screen Navbar-->
+			<div class="menu" id="fullscreen-nav">
+				<ul class="menu__list">
+					
+					<li class="menu__link">
+					 <a href="./our-work.html" onclick={onclick()}>Our Work</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="./services.html" onclick={onclick()}>Services</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="./team.html" onclick={onclick()}>Team</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="/#contact" onclick={onclick()}>Contact</a>
+					</li>
+				
+				</ul>
 			</div>
 			<div class="content">
 				<div class="scroll__stage">
@@ -168,6 +200,7 @@
 			</div>
 		</main>
 		<script type="module" src="./app/index.js"></script>
+		<script src="./app/navbar.js"></script>
 		<script src="./app/form-submit.js"></script>
 
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->

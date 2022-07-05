@@ -10,7 +10,8 @@
 		<link rel="shortcut icon" href="/favicon.824cf0c5.ico">
 		<link rel="stylesheet" type="text/css" href="/index.275a8ed3.css">
         <link rel="stylesheet" type="text/css" href="/index.ea6ffa38.css">
-        <link rel="stylesheet" type="text/css" href="/services.bd277398.css">
+		<link rel="stylesheet" type="text/css" href="/services.bd277398.css">
+		<link rel="stylesheet" type="text/css" href="/index.13ccf6ed.css">
 
 		<script>document.documentElement.className = "js";
 var supportsCssVars = function() {
@@ -25,16 +26,47 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 	<body class="loading">
 		<div id="overlay">
 		<main>
-				<div class="frame">
+				<!-- <div class="frame">
 				<div class="frame__title-wrap">
 					<a href="/"><h1 class="frame__title">CtrlB</h1></a>
 				</div>
 				<nav class="frame__links">
-					<a href="/our-work.html">Our Work</a>
-					<a href="/services.html">Services</a>
-					<a href="/team.html">Team</a>
+					<a href="./our-work.html">Our Work</a>
+					<a href="./services.html">Services</a>
+					<a href="./team.html">Team</a>
 					<a href="#">Contact</a>
 				</nav>
+			</div> -->
+				<!--  Navbar banner -->
+			<div class="navbar">
+			<img src="/ctrlb.e08e7954.png" alt="" class="logo">
+			<a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)">
+				<span></span>
+				<span></span>
+			</a>
+			</div>
+
+			<!-- Full Screen Navbar-->
+			<div class="menu" id="fullscreen-nav">
+				<ul class="menu__list">
+					
+					<li class="menu__link">
+					 <a href="/our-work.html" onclick="{onclick()}">Our Work</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="/services.html" onclick="{onclick()}">Services</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="/team.html" onclick="{onclick()}">Team</a>
+					</li>
+
+					<li class="menu__link">
+					 <a href="/#contact" onclick="{onclick()}">Contact</a>
+					</li>
+				
+				</ul>
 			</div>
 			<div class="content">
 				<div class="scroll__stage">
@@ -159,12 +191,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
                                     <div>
                                     <p class="contact-paragraph">Interested in taking a <strong>bold</strong> step for your brand?</p>
                                     <p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
-                                    <form class="section__paragraph">
-                                        <input class="form-field" type="text" placeholder="Name">
-                                        <input class="form-field" type="text" placeholder="Email">
-                                        <textarea class="form-field" type="text" placeholder="Add a message"></textarea>
-                                        <a href="#" class="section__button">Submit</a>
-                                    </form>
+                                  <form class="section__paragraph">
+										<input class="form-field" type="text" placeholder="Name" id="form-name">
+										<input class="form-field" type="text" placeholder="Email" id="form-email">
+										<textarea class="form-field" type="text" placeholder="Add a message" id="form-message"></textarea>
+										<a href="#" class="section__button" onclick="formSubmission(document.getElementById('form-name').value, document.getElementById('form-email').value, document.getElementById('form-message').value)">Submit</a>
+							</form>
                                     </div>
 								</section>
 								
@@ -175,6 +207,9 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			</div>
 		</main>
 		<script src="/index.cb43b74a.js" defer=""></script>
+		<script src="/index.7dcd634a.js"></script>
+		<script src="/team.14fffef3.js"></script>
+
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
 		</div>
 	</body>

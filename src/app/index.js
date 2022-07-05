@@ -7,12 +7,19 @@ import SmoothScroll from './SmoothScroll'
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
 
+import $, { event } from 'jquery'
+
 
 // jQuery.noConflict();
 //      // Use jQuery via jQuery() instead of via $()
 //      jQuery(document).ready(function(){
 //         alert("yipeekaiyay motherfucker")
 //      });  
+if(window.location.hash) {
+$('html,body').animate({
+  scrollTop: $(window.location.hash).offset().top
+});
+}
 
 class ScrollStage {
   constructor() {
