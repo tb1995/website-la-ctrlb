@@ -10,6 +10,7 @@ function formSubmission(name, email, message) {
 
     fetch("https://extraordinary-malabi-4bc6b4.netlify.app/.netlify/functions/api/send_email", {
         method: "POST",
+        mode: 'no-cors',
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify(data)
         }).then(res => {
