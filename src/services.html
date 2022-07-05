@@ -152,12 +152,12 @@
                                     <div>
                                     <p class="contact-paragraph">Interested in taking a <strong>bold</strong> step for your brand?</p>
                                     <p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
-                                    <form class="section__paragraph">
-                                        <input class="form-field" type="text" placeholder="Name">
-                                        <input class="form-field" type="text" placeholder="Email">
-                                        <textarea class="form-field" type="text" placeholder="Add a message"></textarea>
-                                        <a href="#" class="section__button">Submit</a>
-                                    </form>
+                                  <form class="section__paragraph">
+										<input class="form-field" type="text" placeholder="Name" id="form-name">
+										<input class="form-field" type="text" placeholder="Email" id="form-email">
+										<textarea class="form-field" type="text" placeholder="Add a message" id="form-message"></textarea>
+										<a href="#" class="section__button" onclick="formSubmission(document.getElementById('form-name').value, document.getElementById('form-email').value, document.getElementById('form-message').value)">Submit</a>
+							</form>
                                     </div>
 								</section>
 								
@@ -168,6 +168,8 @@
 			</div>
 		</main>
 		<script type="module" src="./app/index.js"></script>
+		<script src="./app/form-submit.js"></script>
+
 		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
 		</div>
 	</body>
