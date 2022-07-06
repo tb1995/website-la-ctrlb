@@ -15,7 +15,7 @@
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
     </head>
-    <body>
+    <body onscroll="moveNavbar(event)">
 
 		<!-- <div class="frame">
 				<div class="frame__title-wrap">
@@ -29,8 +29,8 @@
 				</nav>
 			</div> -->
 				<!--  Navbar banner -->
-			<div class="navbar">
-			<img src="./images/ctrlb.png" alt="" class="logo">
+			<div class="navbar navbar-fixed" id="navbar">
+			<a href="./index.html" class="no-style-link"><img src="./images/ctrlb.png" alt="CtrlB Logo" class="logo"></a>
 			<a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)" >
 				<span></span>
 				<span></span>

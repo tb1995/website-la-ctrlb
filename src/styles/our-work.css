@@ -9,6 +9,7 @@ body {
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
+  /* margin-top: 8px !important; */
   
 }
 section {   
@@ -19,6 +20,12 @@ section {
 }
 
 
+
+
+.pin-spacer {
+    padding-bottom: 0 !important;
+    z-index: -1;
+}
 
 
 .zoneomics {
@@ -283,7 +290,10 @@ section {
         height: 100%;
         display: flex;
         flex-wrap: wrap;
-        
+    }
+
+    .navbar {
+        margin-bottom: 0 !important;
     }
 }
 
@@ -316,12 +326,28 @@ section {
         /* background-color: #ffd700; */
     }
 
+    
+
+    .navbar-fixed {
+    z-index: 11110;
+    position: fixed;
+    margin-bottom: 50px;
+    top: -10px;
+}
+
 }
 
 @media screen and (min-width: 1100px) {
     .container {
         overflow-y: hidden;
     }
+
+.navbar-fixed {
+    z-index: 11110;
+    position: fixed;
+    margin-bottom: 50px;
+    top: -10px;
+}
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1600px) {

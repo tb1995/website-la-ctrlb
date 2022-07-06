@@ -208,6 +208,13 @@
 
       .header {
           font-size: 35px;
+          margin-left: 50px;
       }
 
+      .contact-header {
+        margin-left: 0;
+      }
+      .about-us {
+        margin-top: 50px;
+      }
 }

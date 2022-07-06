@@ -6,14 +6,24 @@
   display: flex;
 }
 
+.no-style-link {
+  width: 7%;
+  border-bottom: none;
+  margin-left: 5%;
+}
+
+.no-style-link:hover {
+  border: none;
+}
+
 .logo {
-  width: 8%;
+  width: 100%;
   z-index: 100;
   margin-left: 5%;
 }
 
 .nav-btn {
-  z-index: 2;
+  z-index: 99;
   width: 20px;
   height: 20px;
   border-bottom: none;
@@ -63,7 +73,14 @@
 
 @media screen and (max-width: 800px) {
   .logo {
-    width: 18%;
+    width: 100%;
+    margin-top: 11px;
+    margin-left: 5%;
+  }
+
+  .no-style-link {
+    width: 30%;
+    margin-left: 3%;
   }
 
   .menu {
@@ -81,7 +98,7 @@
 }
 
 .menu {
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   visibility: hidden;
   background: #fff;

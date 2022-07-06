@@ -22,7 +22,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 </script>
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
     </head>
-    <body>
+    <body onscroll="moveNavbar(event)">
 
 		<!-- <div class="frame">
 				<div class="frame__title-wrap">
@@ -36,8 +36,8 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 				</nav>
 			</div> -->
 				<!--  Navbar banner -->
-			<div class="navbar">
-			<img src="/ctrlb.e08e7954.png" alt="" class="logo">
+			<div class="navbar navbar-fixed" id="navbar">
+			<a href="/index.html" class="no-style-link"><img src="/ctrlb.e08e7954.png" alt="CtrlB Logo" class="logo"></a>
 			<a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)">
 				<span></span>
 				<span></span>
