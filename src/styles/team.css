@@ -87,7 +87,7 @@
 }
 
 .team-member-image {
-  width: 100%;
+  width: 350px;
   height: 350px;
   margin-bottom: 30px;
   border-radius: 50%;
@@ -296,4 +296,9 @@ We give it an opacity leaner to .25s, that way when we hover we will get a nice 
   opacity: 1;
 }
 
+    }
+
+
+    .contact-header {
+      transform: rotate(0deg) !important;
     }

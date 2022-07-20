@@ -86,7 +86,7 @@
 }
 
 .team-member-image {
-  width: 100%;
+  width: 350px;
   height: 350px;
   border-radius: 50%;
   margin-bottom: 30px;
@@ -277,6 +277,10 @@
   .swap-on-hover:hover > .swap-on-hover__front-image {
     opacity: 1;
   }
+}
+
+.contact-header {
+  transform: rotate(0deg) !important;
 }
 
 /*# sourceMappingURL=team.2934d972.css.map */
