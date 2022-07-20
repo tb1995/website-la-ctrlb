@@ -99,9 +99,9 @@ ScrollTrigger.matchMedia({
     let scrollTriggerTimeline = gsap.timeline();
     desktopSections.forEach((sct, i) => {
       
-      console.log(sct.childNodes[1].childNodes[3].childNodes[1].classList)
+      console.log(sct.childNodes[3].childNodes[1].classList)
   
-  let imageWrapper = "."+sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+  let imageWrapper = "."+sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
   let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1]
   let roundButton = "."+sct.childNodes[3].childNodes[1].classList[1]
   let miniImage = "."+sct.childNodes[1].childNodes[5].classList[1]
@@ -110,7 +110,7 @@ ScrollTrigger.matchMedia({
   let selector = "."+sct.childNodes[3].childNodes[7].classList[1]
 
 
-  let rule = CSSRulePlugin.getRule("."+sct.childNodes[1].childNodes[3].childNodes[1].classList[0]+"::after");
+  let rule = CSSRulePlugin.getRule("."+sct.childNodes[1].childNodes[3].childNodes[1].classList[1]+"::after");
   gsap.to(rule, {
     scrollTrigger: {
     trigger: sct,

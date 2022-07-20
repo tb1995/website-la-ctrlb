@@ -586,15 +586,15 @@ let desktopSections = (0, _gsapDefault.default).utils.toArray(".desktop");
         });
         let scrollTriggerTimeline = (0, _gsapDefault.default).timeline();
         desktopSections.forEach((sct, i)=>{
-            console.log(sct.childNodes[1].childNodes[5].classList[1]);
-            let imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+            console.log(sct.childNodes[3].childNodes[1].classList);
+            let imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
             let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1];
             let roundButton = "." + sct.childNodes[3].childNodes[1].classList[1];
             let miniImage = "." + sct.childNodes[1].childNodes[5].classList[1];
             let description = "." + sct.childNodes[3].childNodes[3].classList[1];
             let visitLink = "." + sct.childNodes[3].childNodes[5].classList[1];
             let selector = "." + sct.childNodes[3].childNodes[7].classList[1];
-            let rule = (0, _cssrulePluginDefault.default).getRule("." + sct.childNodes[1].childNodes[3].childNodes[1].classList[0] + "::after");
+            let rule = (0, _cssrulePluginDefault.default).getRule("." + sct.childNodes[1].childNodes[3].childNodes[1].classList[1] + "::after");
             (0, _gsapDefault.default).to(rule, {
                 scrollTrigger: {
                     trigger: sct,
