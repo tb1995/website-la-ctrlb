@@ -109,10 +109,17 @@ ScrollTrigger.matchMedia({
     roundButtonArray[1] = sct.childNodes[3].childNodes[1].classList[1]
     console.log()
 
+  let roundButton
   let indexOfRoundButton = roundButtonArray.indexOf("round-button")
-  console.log("."+sct.childNodes[3].childNodes[1].classList[indexOfRoundButton])
-  let roundButton = "."+sct.childNodes[3].childNodes[1].classList[indexOfRoundButton]
-  console.log("index of round button: " + indexOfRoundButton)
+  if(indexOfRoundButton === 0) {
+    roundButton = "."+sct.childNodes[3].childNodes[1].classList[1]
+  } else {
+    roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
+  }
+  console.log(roundButtonArray)
+  
+  // let roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
+  // console.log("index of round button: " + indexOfRoundButton)
   let miniImage = "."+sct.childNodes[1].childNodes[5].classList[1]
   let description = "."+sct.childNodes[3].childNodes[3].classList[1]
   let visitLink = "."+sct.childNodes[3].childNodes[5].classList[1]
