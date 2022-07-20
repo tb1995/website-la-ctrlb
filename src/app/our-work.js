@@ -99,7 +99,7 @@ ScrollTrigger.matchMedia({
     let scrollTriggerTimeline = gsap.timeline();
     desktopSections.forEach((sct, i) => {
       
-      console.log(sct.childNodes[1].childNodes[5].classList[1])
+      console.log(sct.childNodes[1].childNodes[3].childNodes[1].classList)
   
   let imageWrapper = "."+sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
   let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1]
