@@ -587,25 +587,65 @@ let desktopSections = (0, _gsapDefault.default).utils.toArray(".desktop");
         let scrollTriggerTimeline = (0, _gsapDefault.default).timeline();
         desktopSections.forEach((sct, i)=>{
             console.log(sct.childNodes[3].childNodes[1].classList);
-            let imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
-            let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1];
-            console.log(typeof sct.childNodes[3].childNodes[1].classList[0]);
+            let imageWrapperArray = [];
+            imageWrapperArray[0] = sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+            imageWrapperArray[1] = sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
+            let imageWrapper;
+            let indexOfImageWrapper = imageWrapperArray.indexOf("image-wrapper");
+            if (indexOfImageWrapper === 0) imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
+            else imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+            // let imageWrapper = "."+sct.childNodes[1].childNodes[3].childNodes[1].classList[1];
+            // console.log(typeof(sct.childNodes[3].childNodes[1].classList[0]))
             let roundButtonArray = [];
             roundButtonArray[0] = sct.childNodes[3].childNodes[1].classList[0];
             roundButtonArray[1] = sct.childNodes[3].childNodes[1].classList[1];
-            console.log();
             let roundButton;
             let indexOfRoundButton = roundButtonArray.indexOf("round-button");
             if (indexOfRoundButton === 0) roundButton = "." + sct.childNodes[3].childNodes[1].classList[1];
             else roundButton = "." + sct.childNodes[3].childNodes[1].classList[0];
-            console.log(roundButtonArray);
             // let roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
             // console.log("index of round button: " + indexOfRoundButton)
-            let miniImage = "." + sct.childNodes[1].childNodes[5].classList[1];
-            let description = "." + sct.childNodes[3].childNodes[3].classList[1];
-            let visitLink = "." + sct.childNodes[3].childNodes[5].classList[1];
-            let selector = "." + sct.childNodes[3].childNodes[7].classList[1];
-            let rule = (0, _cssrulePluginDefault.default).getRule("." + sct.childNodes[1].childNodes[3].childNodes[1].classList[1] + "::after");
+            let miniImageArray = [];
+            miniImageArray[0] = sct.childNodes[1].childNodes[5].classList[0];
+            miniImageArray[1] = sct.childNodes[1].childNodes[5].classList[1];
+            let miniImage;
+            let indexOfMiniImage = miniImageArray.indexOf("mini");
+            if (indexOfMiniImage === 0) miniImage = "." + sct.childNodes[1].childNodes[5].classList[1];
+            else miniImage = "." + sct.childNodes[1].childNodes[5].classList[0];
+            // let miniImage = "."+sct.childNodes[1].childNodes[5].classList[1]
+            let descriptionArray = [];
+            descriptionArray[0] = sct.childNodes[3].childNodes[3].classList[0];
+            descriptionArray[1] = sct.childNodes[3].childNodes[3].classList[1];
+            let description;
+            let indexOfDescription = descriptionArray.indexOf("description");
+            if (indexOfDescription === 0) description = "." + sct.childNodes[3].childNodes[3].classList[1];
+            else description = "." + sct.childNodes[3].childNodes[3].classList[0];
+            // let description = "."+sct.childNodes[3].childNodes[3].classList[1]
+            let visitLinkArray = [];
+            visitLinkArray[0] = sct.childNodes[3].childNodes[5].classList[0];
+            visitLinkArray[1] = sct.childNodes[3].childNodes[5].classList[1];
+            let visitLink;
+            let indexOfVisitLink = visitLinkArray.indexOf("visit-link");
+            if (indexOfVisitLink === 0) visitLink = "." + sct.childNodes[3].childNodes[5].classList[1];
+            else visitLink = "." + sct.childNodes[3].childNodes[5].classList[0];
+            // let visitLink = "."+sct.childNodes[3].childNodes[5].classList[1]
+            let selectorArray = [];
+            selectorArray[0] = sct.childNodes[3].childNodes[7].classList[0];
+            selectorArray[1] = sct.childNodes[3].childNodes[7].classList[1];
+            let selector;
+            let indexOfSelector = selectorArray.indexOf("selector");
+            if (indexOfSelector === 0) selector = "." + sct.childNodes[3].childNodes[7].classList[1];
+            else selector = "." + sct.childNodes[3].childNodes[7].classList[0];
+            // let selector = "."+sct.childNodes[3].childNodes[7].classList[1]
+            let sectionHeadingArray = [];
+            sectionHeadingArray[0] = sct.childNodes[1].childNodes[1].classList[0];
+            sectionHeadingArray[1] = sct.childNodes[1].childNodes[1].classList[1];
+            let sectionHeading;
+            let indexOfSectionHeading = sectionHeadingArray.indexOf("section-heading");
+            if (indexOfSectionHeading === 0) sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1];
+            else sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[0];
+            // let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1]
+            let rule = (0, _cssrulePluginDefault.default).getRule(imageWrapper + "::after");
             (0, _gsapDefault.default).to(rule, {
                 scrollTrigger: {
                     trigger: sct,
