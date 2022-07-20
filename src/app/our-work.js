@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import $, { event } from 'jquery'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
+import CSSRulePlugin from 'gsap/CSSRulePlugin'
 
 
 var zoneomicsPanel = document.getElementById("zoneomics-panel");
@@ -14,7 +15,6 @@ var container = document.getElementById("container")
 function discoverClick() {
   alert("yipeekaiyay motherfucker")
 }
-
 window.addEventListener('scroll', function(){
   console.log(scrollY)
 })
@@ -58,6 +58,8 @@ $(document).ready(function () {
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(CSSRulePlugin);
+
 
 let scrollWidth;
 function createScroller() {
@@ -74,12 +76,13 @@ var triggerAmount = 0;
 
 
 let sections = gsap.utils.toArray(".panel");
+let desktopSections = gsap.utils.toArray(".desktop");
 
 ScrollTrigger.matchMedia({
 
   "(min-width: 800px)": function() {
 
-    gsap.to(sections, {
+    let scrollTween = gsap.to(sections, {
       xPercent: -100 * (5 - 1),
       ease: "none",
       scrollTrigger: {
@@ -92,6 +95,123 @@ ScrollTrigger.matchMedia({
         onUpdate: trigger => triggerAmount = trigger.progress
       }
     });
+
+    let scrollTriggerTimeline = gsap.timeline();
+    desktopSections.forEach((sct, i) => {
+      
+      console.log(sct.childNodes[1].childNodes[5].classList[1])
+  
+  let imageWrapper = "."+sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+  let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1]
+  let roundButton = "."+sct.childNodes[3].childNodes[1].classList[1]
+  let miniImage = "."+sct.childNodes[1].childNodes[5].classList[1]
+  let description = "."+sct.childNodes[3].childNodes[3].classList[1]
+  let visitLink = "."+sct.childNodes[3].childNodes[5].classList[1]
+  let selector = "."+sct.childNodes[3].childNodes[7].classList[1]
+
+
+  let rule = CSSRulePlugin.getRule("."+sct.childNodes[1].childNodes[3].childNodes[1].classList[0]+"::after");
+  gsap.to(rule, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  cssRule:  {height: "0%"},
+  ease: "power2.inOut",
+  duration: 1.8,
+  delay: 0.5
+  })
+
+  gsap.from(imageWrapper, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  scale: 1.6,
+  ease: "power2.inOut",
+  duration: 2.8,
+  delay: 0.5
+  }) 
+
+
+gsap.from(roundButton, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  scale: 0.0,
+  ease: "power2.inOut",
+  duration: 3.8,
+  delay: 0.5
+  }) 
+
+  gsap.to(sectionHeading, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 1.0,
+  ease: "power2.inOut",
+  duration: 2.0,
+  delay: 2
+  }) 
+
+  gsap.to(description, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 1.0,
+  ease: "power2.inOut",
+  duration: 2.0,
+  delay: 2.3
+  }) 
+
+  gsap.to(visitLink, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 1.0,
+  ease: "power2.inOut",
+  duration: 2.0,
+  delay: 3.3
+  }) 
+
+  gsap.to(selector, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 1.0,
+  ease: "power2.inOut",
+  duration: 2.0,
+  delay: 4.3
+  }) 
+
+  gsap.to(miniImage, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 0.99,
+  ease: "power2.inOut",
+  duration: 2.0,
+  delay: 2.7
+  }) 
+
+});
+
+
+
 
   }
 })
@@ -300,3 +420,274 @@ document.querySelector(".navi--prev2").addEventListener("click", slideAnim);
 document.querySelector(".navi--next4").addEventListener("click", slideAnim);
 document.querySelector(".navi--prev3").addEventListener("click", slideAnim);
 document.querySelector(".navi--prev4").addEventListener("click", slideAnim);
+
+
+
+/**
+ * Other Stuff
+ */
+
+//  let tl = gsap.timeline();
+// var rule = CSSRulePlugin.getRule(".image-wrapper-zoneomics::after"); //get the rule
+// console.log(rule)
+// gsap.to(rule, {duration: 1.4, ease: "power2.easeInOut", cssRule: {height: "0%"}});
+
+
+// ScrollTrigger.matchMedia({
+
+//   "(min-width: 1100px)": function() {
+
+//     tl.to(rule, {
+//       scrollTrigger: {
+//         trigger: ".container",
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+        
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8
+//     }).from('.image-wrapper-zoneomics', {scale: 1.6, delay: -1.8, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.zoneomics-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+
+//     gsap.to('.zoneomics-description', {opacity:1, duration: 2.8, delay: 1.2, ease: "power2.easeInOut"})
+//     gsap.to('.zoneomics-mini', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"}),
+//     gsap.to('.visit-link-zoneomics', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"}),
+//     gsap.to('.zoneomics-selector', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"})
+//      gsap.to('.zoneomics-heading', {opacity:1, duration: 2.8, delay: 0.5, ease: "power2.easeInOut"})
+//     // .to('.image-wrapper', {
+//     //    ease: "power2.easeInOut",
+//     //   //  scale: 1.6,
+//     //    duration: 1.4,
+//     //    delay: -1.6,
+//     //   scale: 1.0, 
+//     //   // autoRound: false
+//     // })
+    
+    
+//   }
+  
+// })
+
+
+
+
+
+// // Goldstar
+//  let goldstarTl = gsap.timeline();
+
+// var goldstarRule = CSSRulePlugin.getRule(".image-wrapper-goldstar::after"); //get the rule
+
+// ScrollTrigger.matchMedia({
+
+//   "(min-width: 1100px)": function() {
+
+//     goldstarTl.to(goldstarRule, {
+//       scrollTrigger: {
+//         // trigger: ".goldstar",
+//         start: 100
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+        
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 1
+//     }).from('.image-wrapper-goldstar', {scale: 1.6, delay: 1, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.goldstar-circle', {scale: 0.0, duration: 2.8, delay: -2.3, ease: "power2.easeInOut"})
+//     .to('.goldstar-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.goldstar-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-goldstar', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.goldstar-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.goldstar-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+    
+//   }
+  
+// })
+
+
+
+
+
+
+// // luxor
+//  let luxorTl = gsap.timeline();
+
+// var luxorRule = CSSRulePlugin.getRule(".image-wrapper-luxor::after"); //get the rule
+
+// ScrollTrigger.matchMedia({
+
+//   "(min-width: 1100px)": function() {
+
+//     luxorTl.to(luxorRule, {
+//       scrollTrigger: {
+//         // trigger: ".luxor",
+//         start: () => 1000
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+        
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 3
+//     }).from('.image-wrapper-luxor', {scale: 1.6, delay: 3, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.luxor-circle', {scale: 0.0, duration: 2.8, delay: 1, ease: "power2.easeInOut"})
+//     .to('.luxor-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.luxor-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-luxor', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.luxor-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.luxor-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+    
+//   }
+  
+// })
+
+
+
+
+
+
+// // loren
+//  let lorenTl = gsap.timeline();
+
+// var lorenRule = CSSRulePlugin.getRule(".image-wrapper-loren::after"); //get the rule
+
+// ScrollTrigger.matchMedia({
+
+//   "(min-width: 1100px)": function() {
+
+//     lorenTl.to(lorenRule, {
+//       scrollTrigger: {
+//         trigger: ".loren",
+//         // start: 0,
+//         // containerAnimation: 2060,
+//         // end: 4600, 
+//         markers: true,
+//         // endTrigger: 2600
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+        
+//       },
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 3
+//     }).from('.image-wrapper-loren', {scale: 1.6, delay: 1, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.loren-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+//     .to('.loren-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.loren-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-loren', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.loren-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.loren-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+    
+//   }
+  
+// })
+
+
+
+
+
+
+
+// // nuage
+//  let nuageTl = gsap.timeline();
+
+// var nuageRule = CSSRulePlugin.getRule(".image-wrapper-nuage::after"); //get the rule
+
+// ScrollTrigger.matchMedia({
+
+//   "(min-width: 1100px)": function() {
+
+//     nuageTl.to(nuageRule, {
+//       scrollTrigger: {
+//         trigger: ".nuage-trigger",
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+        
+//       },
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 1
+//     }).from('.image-wrapper-nuage', {scale: 1.6, delay: -1.8, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.nuage-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+//     .to('.nuage-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.nuage-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-nuage', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.nuage-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.nuage-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+    
+//   }
+  
+// })
+
+
+container = document.querySelector(".container");
+// let elements = gsap.utils.toArray(document.querySelectorAll("section > *"));
+// let roundButtons = gsap.utils.toArray(document.querySelectorAll("section > .right-column > .round-button"))
+// console.log(roundButtons.length)
+// console.log(sections)
+
+// let timeline = gsap.timeline();
+
+// timeline.to(sections, {
+//     x: () =>
+//         -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+//     ease: "none",
+//     scrollTrigger: {
+//         pin: true,
+//         scrub: 1,
+//         overwrite: "auto",
+//         trigger: container,
+//         end: () => container.scrollWidth - document.documentElement.clientWidth
+//     },
+//     cssRule
+    
+// });
+
+// let scrollTriggerTimeline = gsap.timeline();
+// let i = 0;
+// sections.forEach((section) => {
+//   // section.childNodes[1].childNodes[3].childNodes[1].classList[1] image wrapper
+//   console.log(section)
+//   console.log((section.getBoundingClientRect().width / 2) * i )
+//   i++
+//   let imageWrapper = section.childNodes[1].childNodes[3].childNodes[1].classList[0];
+//    let rule = CSSRulePlugin.getRule("."+section.childNodes[1].childNodes[3].childNodes[1].classList[0]+"::after"); //get 
+  
+//   scrollTriggerTimeline.to(rule, {
+//       //  x: () =>  -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+//        scrollTrigger: {
+//         trigger: section,
+//         overwrite: "auto",
+//         markers: true,
+//         // horizontal: true,
+//         start: (section.getBoundingClientRect().width / 2) * i,
+//         // end: () =>
+//         //         (section.getBoundingClientRect().width) * i
+//       },
+//       immediateRender: false,
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 0.5
+      
+//   })  
+// })
+
+let scrollTriggerTimeline = gsap.timeline();
+
+

@@ -19,6 +19,13 @@
 
 }
 
+.distortion-talha {
+  height: 350px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  width: 100%;
+}
+
 #overlay {
     position: fixed;
     height: 100%;
@@ -81,8 +88,10 @@
 
 .team-member-image {
   width: 100%;
-  height: 300px;
+  height: 350px;
   margin-bottom: 30px;
+  border-radius: 50%;
+  /* background-size: cover; */
 }
 
 .team-member-text-content {
@@ -218,3 +227,73 @@
         margin-top: 50px;
       }
 }
+
+
+.swap-on-hover {
+  position: relative;	
+	margin:  0 auto;
+	max-width: 400px;
+}
+
+.swap-on-hover img {
+  position: absolute;
+  top:0;
+  left:0;
+  overflow: hidden;
+	/* Sets the width and height for the images*/
+	
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity .5s linear;
+  cursor: pointer;
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.swap-on-hover:hover > .swap-on-hover__front-image{
+  opacity: 0;
+}
+
+.swap-on-hover:hover > .swap-on-hover__back-image{
+    opacity: 1;
+
+
+}
+
+.swap-on-hover__back-image {
+  opacity: 0;
+  
+}
+
+.swap-on-hover__front-image {
+    border: 1px solid #ffd700;
+    z-index: 10000;
+
+}
+
+    @media screen and (max-width: 1100px) {
+
+      .swap-on-hover img {
+       position: static;
+      }
+
+      .swap-on-hover__back-image {
+        opacity: 0 !important;
+        display: none;
+      }
+
+      #no-width {
+        width: fit-content;
+      }
+
+      .swap-on-hover:hover > .swap-on-hover__front-image{
+  opacity: 1;
+}
+
+    }

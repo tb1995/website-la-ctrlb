@@ -58,24 +58,148 @@ section {
   position: relative;
 }
 
-.left-column-zoneomics {
+.image-wrapper-zoneomics {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("zoneomics.f8ec6b0d.jpg");
+  overflow: hidden;
 }
 
-.left-column-goldstar {
+.image-wrapper-parent {
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.image-wrapper-zoneomics:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.image-wrapper-goldstar {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("goldstar.e5b816a3.jpg");
+  overflow: hidden;
 }
 
-.left-column-luxor {
+.image-wrapper-goldstar:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.image-wrapper-luxor {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("luxor.109baf80.jpg");
+  overflow: hidden;
 }
 
-.left-column-loren {
+.image-wrapper-luxor:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.image-wrapper-loren {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("loren.54bd91b5.jpg");
+  overflow: hidden;
 }
 
-.left-column-nuage {
+.image-wrapper-loren:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.image-wrapper-nuage {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("nuage.fcfaee00.jpg");
+  overflow: hidden;
+}
+
+.image-wrapper-nuage:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 1100px) {
+  .zoneomics-mini, .zoneomics-description, .zoneomics-selector, .visit-link-zoneomics, .zoneomics-heading, .goldstar-mini, .goldstar-description, .goldstar-selector, .visit-link-goldstar, .goldstar-heading, .luxor-mini, .luxor-description, .luxor-selector, .visit-link-luxor, .luxor-heading, .loren-mini, .loren-description, .loren-selector, .visit-link-loren, .loren-heading, .nuage-mini, .nuage-description, .nuage-selector, .visit-link-nuage, .nuage-heading {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .left-column-zoneomics {
+    background-image: url("zoneomics.f8ec6b0d.jpg");
+  }
+
+  .left-column-goldstar {
+    background-image: url("goldstar.e5b816a3.jpg");
+  }
+
+  .left-column-luxor {
+    background-image: url("luxor.109baf80.jpg");
+  }
+
+  .left-column-loren {
+    background-image: url("loren.54bd91b5.jpg");
+  }
+
+  .left-column-nuage {
+    background-image: url("nuage.fcfaee00.jpg");
+  }
+}
+
+.goldstar-trigger {
+  position: absolute;
+  top: 900px;
+}
+
+.luxor-trigger {
+  position: absolute;
+  top: 1800px;
+}
+
+.loren-trigger {
+  position: absolute;
+  top: 2700px;
+}
+
+.nuage-trigger {
+  position: absolute;
+  top: 3600px;
 }
 
 .right-column {
@@ -90,6 +214,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 10px;
   width: 0;
+  z-index: 2;
   font-size: 90px;
   position: absolute;
   bottom: 30%;

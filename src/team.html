@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="./styles/base.css">
         <link rel="stylesheet" type="text/css" href="./styles/shaders-on-scroll.sass">
         <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
+
 			<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 </head>    
@@ -90,7 +91,12 @@
                     </div>
                     <div class="text-content-team">
                         <div class="team-member">
-                            <img src="../src/images/person.png" alt="person" class="team-member-image">
+                            <div class="distortion-talha swap-on-hover" id="no-width">
+                                 <img class="swap-on-hover__front-image team-member-image"  src="../src/images/tdawg-1.png" alt="person" class="team-member-image"> 
+
+                                 <img class="swap-on-hover__back-image team-member-image" src="../src/images/tdawg-2.png" alt="person" class="team-member-image"> 
+                            </div>
+                           
 
                             <div class="team-member-text-content">
                                 <p class="name">TALHA HASAN BUTT</p>
@@ -99,21 +105,35 @@
                             </div>
                         </div>
                         <div class="team-member">
-                            <img src="../src/images/person.png" alt="person" class="team-member-image">
+                            <div class="distortion-saad">
+                            <div class="distortion-talha swap-on-hover">
+                                <img class="swap-on-hover__front-image team-member-image" src="../src/images/saad-1.png" alt="person" class="team-member-image"> 
+
+                                 <img class="swap-on-hover__back-image team-member-image" src="../src/images/saad-2.png" alt="person" class="team-member-image"> 
+                            </div>
+                           
+                            </div>
 
                             <div class="team-member-text-content">
                                 <p class="name">SAAD IQBAL HAIDER</p>
                                 <p class="title">HEAD OF MARKETING</p>
-                                <p class="role-description">Saad's ad campaigns can sell sand to an arab. Saad brings international marketing both on the agency-side and the client-side. A wearer of many hats, Saad has keen elvish eyes and a fresh perspective.</p>
+                                <p class="role-description">The Marketing guy. Saad brings international marketing both on the agency-side and the client-side. A wearer of many hats, Saad has a keen eye and a fresh perspective.</p>
                             </div>
                         </div>
                         <div class="team-member">
-                            <img src="../src/images/person.png" alt="person" class="team-member-image">
+                            <div class="distortion-saad">
+                            <div class="distortion-talha swap-on-hover">
+                                <img class="swap-on-hover__front-image team-member-image" src="../src/images/rabia-1.png" alt="person" class="team-member-image"> 
+
+                                 <img class="swap-on-hover__back-image team-member-image" src="../src/images/rabia-2.png" alt="person" class="team-member-image"> 
+                            </div>
+                           
+                            </div>
 
                             <div class="team-member-text-content">
                                 <p class="name">RABIA KHAN SWATI</p>
                                 <p class="title">SOFTWARE ENGINEER</p>
-                                <p class="role-description">Part of the technology team, The Swatinator brings enthusiasm and skill to her work as a software engineer on team where she develops cutting edge digital projects.</p>
+                                <p class="role-description">Part of the technology team, Rabia brings enthusiasm and skill to her work as a software engineer on team where she develops cutting edge digital projects.</p>
                             </div>
                         </div>
                     </div>
@@ -154,11 +174,31 @@
 
     </div>
     </main>
-            <script type="module" src="./app/index.js"></script>
-            <script src="./app/navbar.js"></script>
-            <script src="./app/form-submit.js"></script>
+            
 
 
             </div>
+
+<script type="module" src="./app/index.js"></script>
+<script src="./app/navbar.js"></script>
+<script src="./app/form-submit.js"></script>
+
+
+<!-- <script src="https://cdn.js.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+<script src="https://cdn.js.cloudflare.com/ajax/libs/gsap/109/2.1.3/TweenMax.min.js"></script> -->
+
+<!-- <script type="module" src="./app/hover-effect.js"></script>          -->
+
+<!-- <script type="module" src="./app/team.js"></script> -->
+<!-- <script>
+    var hoverDistort = new hoverEffect({
+        parent : document.querySelector('.distortion-talha'),
+        intensity: 0.2,
+        image1: '../images/talha-serious.png',
+        image2: '../images/talha-silly.jpg',
+        displacementImage: '../images/diss.png'
+    })
+</script> -->
+
 </body>
 </html>

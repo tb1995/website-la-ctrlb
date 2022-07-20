@@ -512,6 +512,8 @@ var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 var _scrollToPlugin = require("gsap/ScrollToPlugin");
 var _scrollToPluginDefault = parcelHelpers.interopDefault(_scrollToPlugin);
+var _cssrulePlugin = require("gsap/CSSRulePlugin");
+var _cssrulePluginDefault = parcelHelpers.interopDefault(_cssrulePlugin);
 var zoneomicsPanel = document.getElementById("zoneomics-panel");
 var goldstarPanel = document.getElementById("goldstar-panel");
 var luxorPanel = document.getElementById("luxor-panel");
@@ -552,6 +554,7 @@ window.addEventListener("scroll", function() {
 });
 (0, _gsapDefault.default).registerPlugin((0, _scrollTriggerDefault.default));
 (0, _gsapDefault.default).registerPlugin((0, _scrollToPluginDefault.default));
+(0, _gsapDefault.default).registerPlugin((0, _cssrulePluginDefault.default));
 let scrollWidth;
 function createScroller() {
     scrollWidth = container.offsetWidth - innerWidth;
@@ -565,9 +568,10 @@ function createScroller() {
 createScroller();
 var triggerAmount = 0;
 let sections = (0, _gsapDefault.default).utils.toArray(".panel");
+let desktopSections = (0, _gsapDefault.default).utils.toArray(".desktop");
 (0, _scrollTriggerDefault.default).matchMedia({
     "(min-width: 800px)": function() {
-        (0, _gsapDefault.default).to(sections, {
+        let scrollTween = (0, _gsapDefault.default).to(sections, {
             xPercent: -400,
             ease: "none",
             scrollTrigger: {
@@ -579,6 +583,100 @@ let sections = (0, _gsapDefault.default).utils.toArray(".panel");
                 end: "+=3500",
                 onUpdate: (trigger)=>triggerAmount = trigger.progress
             }
+        });
+        let scrollTriggerTimeline = (0, _gsapDefault.default).timeline();
+        desktopSections.forEach((sct, i)=>{
+            console.log(sct.childNodes[1].childNodes[5].classList[1]);
+            let imageWrapper = "." + sct.childNodes[1].childNodes[3].childNodes[1].classList[0];
+            let sectionHeading = "." + sct.childNodes[1].childNodes[1].classList[1];
+            let roundButton = "." + sct.childNodes[3].childNodes[1].classList[1];
+            let miniImage = "." + sct.childNodes[1].childNodes[5].classList[1];
+            let description = "." + sct.childNodes[3].childNodes[3].classList[1];
+            let visitLink = "." + sct.childNodes[3].childNodes[5].classList[1];
+            let selector = "." + sct.childNodes[3].childNodes[7].classList[1];
+            let rule = (0, _cssrulePluginDefault.default).getRule("." + sct.childNodes[1].childNodes[3].childNodes[1].classList[0] + "::after");
+            (0, _gsapDefault.default).to(rule, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                cssRule: {
+                    height: "0%"
+                },
+                ease: "power2.inOut",
+                duration: 1.8,
+                delay: 0.5
+            });
+            (0, _gsapDefault.default).from(imageWrapper, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                scale: 1.6,
+                ease: "power2.inOut",
+                duration: 2.8,
+                delay: 0.5
+            });
+            (0, _gsapDefault.default).from(roundButton, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                scale: 0.0,
+                ease: "power2.inOut",
+                duration: 3.8,
+                delay: 0.5
+            });
+            (0, _gsapDefault.default).to(sectionHeading, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 1.0,
+                ease: "power2.inOut",
+                duration: 2.0,
+                delay: 2
+            });
+            (0, _gsapDefault.default).to(description, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 1.0,
+                ease: "power2.inOut",
+                duration: 2.0,
+                delay: 2.3
+            });
+            (0, _gsapDefault.default).to(visitLink, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 1.0,
+                ease: "power2.inOut",
+                duration: 2.0,
+                delay: 3.3
+            });
+            (0, _gsapDefault.default).to(selector, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 1.0,
+                ease: "power2.inOut",
+                duration: 2.0,
+                delay: 4.3
+            });
+            (0, _gsapDefault.default).to(miniImage, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 0.99,
+                ease: "power2.inOut",
+                duration: 2.0,
+                delay: 2.7
+            });
         });
     }
 });
@@ -747,8 +845,202 @@ document.querySelector(".navi--prev2").addEventListener("click", slideAnim);
 document.querySelector(".navi--next4").addEventListener("click", slideAnim);
 document.querySelector(".navi--prev3").addEventListener("click", slideAnim);
 document.querySelector(".navi--prev4").addEventListener("click", slideAnim);
+/**
+ * Other Stuff
+ */ //  let tl = gsap.timeline();
+// var rule = CSSRulePlugin.getRule(".image-wrapper-zoneomics::after"); //get the rule
+// console.log(rule)
+// gsap.to(rule, {duration: 1.4, ease: "power2.easeInOut", cssRule: {height: "0%"}});
+// ScrollTrigger.matchMedia({
+//   "(min-width: 1100px)": function() {
+//     tl.to(rule, {
+//       scrollTrigger: {
+//         trigger: ".container",
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8
+//     }).from('.image-wrapper-zoneomics', {scale: 1.6, delay: -1.8, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.zoneomics-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+//     gsap.to('.zoneomics-description', {opacity:1, duration: 2.8, delay: 1.2, ease: "power2.easeInOut"})
+//     gsap.to('.zoneomics-mini', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"}),
+//     gsap.to('.visit-link-zoneomics', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"}),
+//     gsap.to('.zoneomics-selector', {opacity:1, duration: 2.8, delay: 1.0, ease: "power2.easeInOut"})
+//      gsap.to('.zoneomics-heading', {opacity:1, duration: 2.8, delay: 0.5, ease: "power2.easeInOut"})
+//     // .to('.image-wrapper', {
+//     //    ease: "power2.easeInOut",
+//     //   //  scale: 1.6,
+//     //    duration: 1.4,
+//     //    delay: -1.6,
+//     //   scale: 1.0, 
+//     //   // autoRound: false
+//     // })
+//   }
+// })
+// // Goldstar
+//  let goldstarTl = gsap.timeline();
+// var goldstarRule = CSSRulePlugin.getRule(".image-wrapper-goldstar::after"); //get the rule
+// ScrollTrigger.matchMedia({
+//   "(min-width: 1100px)": function() {
+//     goldstarTl.to(goldstarRule, {
+//       scrollTrigger: {
+//         // trigger: ".goldstar",
+//         start: 100
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 1
+//     }).from('.image-wrapper-goldstar', {scale: 1.6, delay: 1, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.goldstar-circle', {scale: 0.0, duration: 2.8, delay: -2.3, ease: "power2.easeInOut"})
+//     .to('.goldstar-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.goldstar-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-goldstar', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.goldstar-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.goldstar-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+//   }
+// })
+// // luxor
+//  let luxorTl = gsap.timeline();
+// var luxorRule = CSSRulePlugin.getRule(".image-wrapper-luxor::after"); //get the rule
+// ScrollTrigger.matchMedia({
+//   "(min-width: 1100px)": function() {
+//     luxorTl.to(luxorRule, {
+//       scrollTrigger: {
+//         // trigger: ".luxor",
+//         start: () => 1000
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+//       },
+//       ease: "power2.inOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 3
+//     }).from('.image-wrapper-luxor', {scale: 1.6, delay: 3, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.luxor-circle', {scale: 0.0, duration: 2.8, delay: 1, ease: "power2.easeInOut"})
+//     .to('.luxor-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.luxor-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-luxor', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.luxor-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.luxor-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+//   }
+// })
+// // loren
+//  let lorenTl = gsap.timeline();
+// var lorenRule = CSSRulePlugin.getRule(".image-wrapper-loren::after"); //get the rule
+// ScrollTrigger.matchMedia({
+//   "(min-width: 1100px)": function() {
+//     lorenTl.to(lorenRule, {
+//       scrollTrigger: {
+//         trigger: ".loren",
+//         // start: 0,
+//         // containerAnimation: 2060,
+//         // end: 4600, 
+//         markers: true,
+//         // endTrigger: 2600
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+//       },
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 3
+//     }).from('.image-wrapper-loren', {scale: 1.6, delay: 1, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.loren-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+//     .to('.loren-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.loren-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-loren', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.loren-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.loren-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+//   }
+// })
+// // nuage
+//  let nuageTl = gsap.timeline();
+// var nuageRule = CSSRulePlugin.getRule(".image-wrapper-nuage::after"); //get the rule
+// ScrollTrigger.matchMedia({
+//   "(min-width: 1100px)": function() {
+//     nuageTl.to(nuageRule, {
+//       scrollTrigger: {
+//         trigger: ".nuage-trigger",
+//         // snap: 1 / (5 - 1),
+//         // base vertical scrolling on how wide the container is so it feels more natural.
+//         // onUpdate: trigger => triggerAmount = trigger.progress
+//       },
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 1
+//     }).from('.image-wrapper-nuage', {scale: 1.6, delay: -1.8, duration: 2.8, ease: "power2.easeInOut"})
+//     // .set('.zoneomics-circle', {scale: 0.0})
+//     .from('.nuage-circle', {scale: 0.0, duration: 2.8, delay: -2.8, ease: "power2.easeInOut"})
+//     .to('.nuage-description', {opacity:1, duration: 2.8, delay: -1.5, ease: "power2.easeInOut"})
+//     .to('.nuage-mini', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.visit-link-nuage', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//     .to('.nuage-selector', {opacity:1, duration: 2.8, delay: -2.5, ease: "power2.easeInOut"})
+//      .to('.nuage-heading', {opacity:1, duration: 2.8, delay: -4.0, ease: "power2.easeInOut"})
+//   }
+// })
+container = document.querySelector(".container");
+// let elements = gsap.utils.toArray(document.querySelectorAll("section > *"));
+// let roundButtons = gsap.utils.toArray(document.querySelectorAll("section > .right-column > .round-button"))
+// console.log(roundButtons.length)
+// console.log(sections)
+// let timeline = gsap.timeline();
+// timeline.to(sections, {
+//     x: () =>
+//         -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+//     ease: "none",
+//     scrollTrigger: {
+//         pin: true,
+//         scrub: 1,
+//         overwrite: "auto",
+//         trigger: container,
+//         end: () => container.scrollWidth - document.documentElement.clientWidth
+//     },
+//     cssRule
+// });
+// let scrollTriggerTimeline = gsap.timeline();
+// let i = 0;
+// sections.forEach((section) => {
+//   // section.childNodes[1].childNodes[3].childNodes[1].classList[1] image wrapper
+//   console.log(section)
+//   console.log((section.getBoundingClientRect().width / 2) * i )
+//   i++
+//   let imageWrapper = section.childNodes[1].childNodes[3].childNodes[1].classList[0];
+//    let rule = CSSRulePlugin.getRule("."+section.childNodes[1].childNodes[3].childNodes[1].classList[0]+"::after"); //get 
+//   scrollTriggerTimeline.to(rule, {
+//       //  x: () =>  -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+//        scrollTrigger: {
+//         trigger: section,
+//         overwrite: "auto",
+//         markers: true,
+//         // horizontal: true,
+//         start: (section.getBoundingClientRect().width / 2) * i,
+//         // end: () =>
+//         //         (section.getBoundingClientRect().width) * i
+//       },
+//       immediateRender: false,
+//       ease: "power2.easeInOut",
+//       cssRule: {height: "0%"},
+//       duration: 1.8,
+//       delay: 0.5
+//   })  
+// })
+let scrollTriggerTimeline = (0, _gsapDefault.default).timeline();
 
-},{"gsap":"fPSuC","jquery":"hgMhh","gsap/ScrollTrigger":"7wnFk","gsap/ScrollToPlugin":"9xJDW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
+},{"gsap":"fPSuC","jquery":"hgMhh","gsap/ScrollTrigger":"7wnFk","gsap/ScrollToPlugin":"9xJDW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","gsap/CSSRulePlugin":"e8xv1"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS);
@@ -13331,6 +13623,90 @@ ScrollToPlugin.max = _max;
 ScrollToPlugin.getOffset = _getOffset;
 ScrollToPlugin.buildGetter = _buildGetter;
 _getGSAP() && gsap.registerPlugin(ScrollToPlugin);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e8xv1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CSSRulePlugin", ()=>CSSRulePlugin);
+parcelHelpers.export(exports, "default", ()=>CSSRulePlugin);
+/*!
+ * CSSRulePlugin 3.10.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/ /* eslint-disable */ var gsap, _coreInitted, _win, _doc, CSSPlugin, _windowExists = function _windowExists() {
+    return typeof window !== "undefined";
+}, _getGSAP = function _getGSAP() {
+    return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+}, _checkRegister = function _checkRegister() {
+    if (!_coreInitted) {
+        _initCore();
+        if (!CSSPlugin) console.warn("Please gsap.registerPlugin(CSSPlugin, CSSRulePlugin)");
+    }
+    return _coreInitted;
+}, _initCore = function _initCore(core) {
+    gsap = core || _getGSAP();
+    if (_windowExists()) {
+        _win = window;
+        _doc = document;
+    }
+    if (gsap) {
+        CSSPlugin = gsap.plugins.css;
+        if (CSSPlugin) _coreInitted = 1;
+    }
+};
+var CSSRulePlugin = {
+    version: "3.10.4",
+    name: "cssRule",
+    init: function init(target, value, tween, index, targets) {
+        if (!_checkRegister() || typeof target.cssText === "undefined") return false;
+        var div = target._gsProxy = target._gsProxy || _doc.createElement("div");
+        this.ss = target;
+        this.style = div.style;
+        div.style.cssText = target.cssText;
+        CSSPlugin.prototype.init.call(this, div, value, tween, index, targets); //we just offload all the work to the regular CSSPlugin and then copy the cssText back over to the rule in the render() method. This allows us to have all of the updates to CSSPlugin automatically flow through to CSSRulePlugin instead of having to maintain both
+    },
+    render: function render(ratio, data) {
+        var pt = data._pt, style = data.style, ss = data.ss, i;
+        while(pt){
+            pt.r(ratio, pt.d);
+            pt = pt._next;
+        }
+        i = style.length;
+        while(--i > -1)ss[style[i]] = style[style[i]];
+    },
+    getRule: function getRule(selector) {
+        _checkRegister();
+        var ruleProp = _doc.all ? "rules" : "cssRules", styleSheets = _doc.styleSheets, i = styleSheets.length, pseudo = selector.charAt(0) === ":", j, curSS, cs, a;
+        selector = (pseudo ? "" : ",") + selector.split("::").join(":").toLowerCase() + ","; //note: old versions of IE report tag name selectors as upper case, so we just change everything to lowercase.
+        if (pseudo) a = [];
+        while(i--){
+            //Firefox may throw insecure operation errors when css is loaded from other domains, so try/catch.
+            try {
+                curSS = styleSheets[i][ruleProp];
+                if (!curSS) continue;
+                j = curSS.length;
+            } catch (e) {
+                console.warn(e);
+                continue;
+            }
+            while(--j > -1){
+                cs = curSS[j];
+                if (cs.selectorText && ("," + cs.selectorText.split("::").join(":").toLowerCase() + ",").indexOf(selector) !== -1) {
+                    //note: IE adds an extra ":" to pseudo selectors, so .myClass:after becomes .myClass::after, so we need to strip the extra one out.
+                    if (pseudo) a.push(cs.style);
+                    else return cs.style;
+                }
+            }
+        }
+        return a;
+    },
+    register: _initCore
+};
+_getGSAP() && gsap.registerPlugin(CSSRulePlugin);
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["58WPF","8O6bY"], "8O6bY", "parcelRequire09c7")
 

@@ -82,8 +82,161 @@ section {
     margin: 4% 0;
     margin-bottom: 0;
     position: relative;
+    /* overflow-y: hidden; */
+     /* overflow: hidden; */
 }
 
+
+
+
+
+
+
+
+
+
+.image-wrapper-zoneomics {
+    background-image: url("../images/zoneomics.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-parent {
+    overflow: hidden !important;
+    height: 100%;
+    width: 100%;
+}
+
+ .image-wrapper-zoneomics::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+.image-wrapper-goldstar {
+    background-image: url("../images/goldstar.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-goldstar::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+
+.image-wrapper-luxor {
+    background-image: url("../images/luxor.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-luxor::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+
+.image-wrapper-loren {
+    background-image: url("../images/loren.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-loren::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+.image-wrapper-nuage {
+    background-image: url("../images/nuage.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-nuage::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+/* .image-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-column > img {
+    /* position: absolute;
+    width: 100%; */
+}
+
+@media screen and (min-width: 1100px) {
+    .zoneomics-mini, .zoneomics-description, .zoneomics-selector, .visit-link-zoneomics, .zoneomics-heading, .goldstar-mini, .goldstar-description, .goldstar-selector, .visit-link-goldstar, .goldstar-heading, .luxor-mini, .luxor-description, .luxor-selector, .visit-link-luxor, .luxor-heading, .loren-mini, .loren-description, .loren-selector, .visit-link-loren, .loren-heading, .nuage-mini, .nuage-description, .nuage-selector, .visit-link-nuage, .nuage-heading {
+        opacity: 0;
+    }
+
+
+}
+@media screen and (max-width: 1100px) {
 .left-column-zoneomics {
         background-image: url("../images/zoneomics.jpg");
 }
@@ -101,6 +254,58 @@ section {
 .left-column-nuage {
         background-image: url("../images/nuage.jpg");
 }
+
+}
+.left-column-zoneomics {
+        /* background-image: url("../images/zoneomics.jpg"); */
+}
+
+.left-column-goldstar {
+        /* background-image: url("../images/goldstar.jpg"); */
+}
+
+
+
+/* .zoneomics-trigger {
+    position: absolute;
+    top: 900px;
+} */
+
+.goldstar-trigger {
+    position: absolute;
+    top: 900px;
+}
+
+
+.luxor-trigger {
+    position: absolute;
+    top: 1800px;
+}
+
+
+.loren-trigger {
+    position: absolute;
+    top: 2700px;
+}
+
+
+.nuage-trigger {
+    position: absolute;
+    top: 3600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .right-column {
     flex: 0 1 40%;
     /* background-color: green; */
@@ -120,6 +325,7 @@ section {
     letter-spacing: 10px;
     transform: rotate(270deg);
     width: 0;
+    z-index: 2;
 }
 
 .round-button {

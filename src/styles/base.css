@@ -241,3 +241,7 @@ html {
 .webgl {
     z-index: 30 !important;
 }
+
+a {
+	border-bottom: none;
+}

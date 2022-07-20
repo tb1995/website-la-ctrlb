@@ -4,12 +4,15 @@
         margin-bottom: 50px;
         align-items: center;
         height: 100px;
+        z-index: 190;
+
     }
 
     .no-style-link {
         width: 7%;
         border-bottom: none;
         margin-left: 5%;
+        z-index: 195;
 
     }
 
@@ -20,7 +23,7 @@
     .logo {
         width: 100%;
         margin-left: 5%;
-        z-index: 100;
+        z-index: 200;
 
     }
     .nav-btn {
@@ -102,6 +105,20 @@
             margin-right: 0;
         }
     }
+
+     @media screen and (min-width: 800px) and (max-width: 2000px) {
+
+         .no-style-link {
+            /* width: 3%; */
+            margin-left: 1%;
+         }
+        .logo {
+            width: 100%;
+            margin-top: 11px;
+            margin-left: 5%;
+        }
+
+     }
 
 /*
  * Fullscreen Nav CSS

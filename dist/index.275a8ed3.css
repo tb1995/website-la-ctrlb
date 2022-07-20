@@ -231,4 +231,8 @@ html {
   z-index: 30 !important;
 }
 
+a {
+  border-bottom: none;
+}
+
 /*# sourceMappingURL=index.275a8ed3.css.map */
