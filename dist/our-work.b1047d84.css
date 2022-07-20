@@ -158,6 +158,10 @@ section {
   .zoneomics-mini, .zoneomics-description, .zoneomics-selector, .visit-link-zoneomics, .zoneomics-heading, .goldstar-mini, .goldstar-description, .goldstar-selector, .visit-link-goldstar, .goldstar-heading, .luxor-mini, .luxor-description, .luxor-selector, .visit-link-luxor, .luxor-heading, .loren-mini, .loren-description, .loren-selector, .visit-link-loren, .loren-heading, .nuage-mini, .nuage-description, .nuage-selector, .visit-link-nuage, .nuage-heading {
     opacity: 0;
   }
+
+  #zoneomics-panel {
+    width: 103vw;
+  }
 }
 
 @media screen and (max-width: 1100px) {
