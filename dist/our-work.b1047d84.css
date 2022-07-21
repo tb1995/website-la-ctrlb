@@ -434,11 +434,16 @@ section {
   }
 
   .zoneomics-heading {
-    bottom: 8%;
+    bottom: 0%;
   }
 
   body {
     max-height: 100vh;
+  }
+
+  .section-heading {
+    font-size: 75px;
+    bottom: 0%;
   }
 }
 
