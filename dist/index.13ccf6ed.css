@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Croogla 4F";
+  src: url("Croogla4F.60cc7f46.eot");
+  src: local("Croogla 4F"), local(Croogla4F), url("Croogla4F.60cc7f46.eot#iefix") format("embedded-opentype"), url("Croogla4F.633ebc48.woff2") format("woff2"), url("Croogla4F.142b9009.woff") format("woff"), url("Croogla4F.b335bf02.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .navbar {
   width: 100%;
   height: 100px;
@@ -22,6 +30,26 @@
   width: 100%;
   z-index: 200;
   margin-left: 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-text {
+  color: #115173;
+  font: 50px "Croogla 4F", Arial, Helvetica, sans-serif;
+}
+
+.white-color {
+  color: #fff !important;
+}
+
+.colored {
+  color: gold;
+}
+
+.logo-invisible {
+  opacity: 0;
 }
 
 .nav-btn {

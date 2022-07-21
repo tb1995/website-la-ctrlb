@@ -1,0 +1,1 @@
+{"mappings":"","sources":["src/app/navbar-gsap.js"],"sourcesContent":["// import gsap from 'gsap'\n// import $, { event } from 'jquery'\n// import ScrollTrigger from 'gsap/ScrollTrigger'\n\n\n// gsap.registerPlugin(ScrollTrigger);\n\n"],"names":[],"version":3,"file":"index.b507a8f5.js.map","sourceRoot":"/__parcel_source_root/"}

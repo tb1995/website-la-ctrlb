@@ -5,6 +5,12 @@ let fullscreenNav = document.getElementById('fullscreen-nav')
 let navbar = document.getElementById('navbar')
 
 
+window.addEventListener('scroll', ()=> {
+        // document.querySelector('.logo').src = "./images/ctrlb-alt.png"
+        document.querySelector('.logo-text').classList.toggle('white-color', scrollY > 80)
+    
+})
+
 function toggle(event) {
     event.preventDefault();
     console.log("testing")

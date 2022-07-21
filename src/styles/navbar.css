@@ -1,3 +1,4 @@
+ @import url("croogla/stylesheet.css");
  .navbar {
         display: flex;
         width: 100%;
@@ -13,6 +14,7 @@
         border-bottom: none;
         margin-left: 5%;
         z-index: 195;
+        /* position: relative; */
 
     }
 
@@ -24,7 +26,29 @@
         width: 100%;
         margin-left: 5%;
         z-index: 200;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #logo-alt {
+        
+    }
 
+    .logo-text {
+        font: 50px 'Croogla 4F', Arial, Helvetica, sans-serif;
+        color: #115173;
+    }
+
+    .white-color {
+        color: white !important;
+    }
+
+    .colored {
+        color: #ffd700;
+    }
+
+    .logo-invisible {
+        opacity: 0;
     }
     .nav-btn {
         position: absolute;
