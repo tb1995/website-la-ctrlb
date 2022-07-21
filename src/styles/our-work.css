@@ -509,7 +509,6 @@ section {
 
 
 
-
 /* TABLETS */
 
 @media screen and (min-width: 751px) and (max-width: 1100px) {
@@ -558,6 +557,11 @@ section {
     margin-bottom: 50px;
     top: -10px;
 }
+
+.zoneomics-circle, .goldstar-circle, .luxor-circle, .loren-circle, .nuage-circle {
+    opacity: 0;
+}
+
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1600px) {

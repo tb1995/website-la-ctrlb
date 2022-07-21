@@ -124,6 +124,11 @@ ScrollTrigger.matchMedia({
   } else {
     roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
   }
+
+  // gsap.set(roundButton, {
+  //   opacity: 0.0
+  //   // delay: -4
+  // })
   // let roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
   // console.log("index of round button: " + indexOfRoundButton)
   let miniImageArray = []
@@ -215,6 +220,17 @@ ScrollTrigger.matchMedia({
   delay: 0.5
   }) 
 
+  gsap.to(roundButton, {
+    scrollTrigger: {
+    trigger: sct,
+    containerAnimation: scrollTween
+    
+  },
+  opacity: 0.99,
+  ease: "power2.inOut",
+  duration: 1.0,
+  delay: -1
+  }) 
 
 gsap.from(roundButton, {
     scrollTrigger: {

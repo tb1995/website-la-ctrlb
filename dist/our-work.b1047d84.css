@@ -426,6 +426,10 @@ section {
     position: fixed;
     top: -10px;
   }
+
+  .zoneomics-circle, .goldstar-circle, .luxor-circle, .loren-circle, .nuage-circle {
+    opacity: 0;
+  }
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1600px) {

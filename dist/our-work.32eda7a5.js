@@ -603,6 +603,10 @@ let desktopSections = (0, _gsapDefault.default).utils.toArray(".desktop");
             let indexOfRoundButton = roundButtonArray.indexOf("round-button");
             if (indexOfRoundButton === 0) roundButton = "." + sct.childNodes[3].childNodes[1].classList[1];
             else roundButton = "." + sct.childNodes[3].childNodes[1].classList[0];
+            // gsap.set(roundButton, {
+            //   opacity: 0.0
+            //   // delay: -4
+            // })
             // let roundButton = "."+sct.childNodes[3].childNodes[1].classList[0]
             // console.log("index of round button: " + indexOfRoundButton)
             let miniImageArray = [];
@@ -667,6 +671,16 @@ let desktopSections = (0, _gsapDefault.default).utils.toArray(".desktop");
                 ease: "power2.inOut",
                 duration: 2.8,
                 delay: 0.5
+            });
+            (0, _gsapDefault.default).to(roundButton, {
+                scrollTrigger: {
+                    trigger: sct,
+                    containerAnimation: scrollTween
+                },
+                opacity: 0.99,
+                ease: "power2.inOut",
+                duration: 1.0,
+                delay: -1
             });
             (0, _gsapDefault.default).from(roundButton, {
                 scrollTrigger: {
