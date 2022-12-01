@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-PFNFZ8M');</script>
-		<!-- End Google Tag Manager -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Ctrl B | Home</title>
-		<meta name="description" content="CtrlB, brilliantly bold marketing and web development" />
-		<meta name="keywords" content="ctrlb, marketing, web development, strategy, digital marketing, social media management, copywriting" />
-		<meta name="author" content="CtrlB" />
-		<link rel="shortcut icon" href="./images/ctrlb.svg">
-		<link rel="stylesheet" type="text/css" href="./styles/base.css" />
-		<link rel="stylesheet" type="text/css" href="./styles/shaders-on-scroll.sass" />
-		<link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
-	</head>
-	<body class="loading">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFNFZ8M"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-		<div id="overlay">
-		<main>
-			<!-- <div class="frame">
+  <head>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NZ7B3NW"></script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PFNFZ8M');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ctrl B | Home</title>
+    <meta
+      name="description"
+      content="CtrlB, brilliantly bold marketing and web development"
+    />
+    <meta
+      name="keywords"
+      content="ctrlb, marketing, web development, strategy, digital marketing, social media management, copywriting"
+    />
+    <meta name="author" content="CtrlB" />
+    <link rel="shortcut icon" href="./images/ctrlb.svg" />
+    <link rel="stylesheet" type="text/css" href="./styles/base.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/shaders-on-scroll.sass"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
+    <script>
+      document.documentElement.className = 'js';
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement('style');
+        return (
+          (t.innerHTML = 'root: { --tmp-var: bold; }'),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports('font-weight', 'var(--tmp-var)')
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          'Please view this demo in a modern browser that supports CSS Variables.'
+        );
+    </script>
+    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+  </head>
+  <body class="loading">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PFNFZ8M"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="overlay">
+      <main>
+        <!-- <div class="frame">
 				<div class="frame__title-wrap">
 					<a href="/"><h1 class="frame__title">CtrlB</h1></a>
 				</div>
@@ -40,120 +85,144 @@
 				</nav>
 			</div> -->
 
-			<!--  Navbar banner -->
-			<div class="navbar">
-			<a href="./index.html" class="no-style-link">
-				
-				<p class="logo-text">Ctrl<span class="colored">B</span></p>
-			
-			</a>
+        <!--  Navbar banner -->
+        <div class="navbar">
+          <a href="./index.html" class="no-style-link">
+            <p class="logo-text">Ctrl<span class="colored">B</span></p>
+          </a>
 
-				
+          <a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)">
+            <span></span>
+            <span></span>
+          </a>
+        </div>
 
-			<a href="#" id="sandwich" class="nav-btn" onclick="toggle(event)" >
-				<span></span>
-				<span></span>
-			</a>
-			</div>
+        <!-- Full Screen Navbar-->
+        <div class="menu" id="fullscreen-nav">
+          <ul class="menu__list">
+            <li class="menu__link">
+              <a href="./our-work.html" onclick="{onclick()}">Our Work</a>
+            </li>
 
-			<!-- Full Screen Navbar-->
-			<div class="menu" id="fullscreen-nav">
-				<ul class="menu__list">
-					
-					<li class="menu__link">
-					 <a href="./our-work.html" onclick={onclick()}>Our Work</a>
-					</li>
+            <li class="menu__link">
+              <a href="./services.html" onclick="{onclick()}">Services</a>
+            </li>
 
-					<li class="menu__link">
-					 <a href="./services.html" onclick={onclick()}>Services</a>
-					</li>
+            <li class="menu__link">
+              <a href="./team.html" onclick="{onclick()}">Team</a>
+            </li>
 
-					<li class="menu__link">
-					 <a href="./team.html" onclick={onclick()}>Team</a>
-					</li>
+            <li class="menu__link">
+              <a href="./index.html#contact" onclick="{onclick()}">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-					<li class="menu__link">
-					 <a href="./index.html#contact" onclick={onclick()}>Contact</a>
-					</li>
-				
-				</ul>
-			</div>
+        <div class="content">
+          <div class="scroll__stage">
+            <div class="scroll__content">
+              <section class="section">
+                <div class="section__title">
+                  <h1 class="section__title-number">
+                    A digital marketing agency for the modern age.
+                  </h1>
+                  <h2 class="section__title-text"></h2>
+                  <p class="section__title-arrow">
+                    <span>➤</span><br />
+                    <span>➤</span>
+                  </p>
+                </div>
+                <p class="section__paragraph">
+                  We do bold work and we do it well.<br />
+                  <a href="#work" class="section__button" id="discover-btn"
+                    >Discover</a
+                  >
+                </p>
+                <!-- onclick="document.getElementById('some-work').scrollIntoView(); " -->
+              </section>
+              <section class="section transparent-overlay" id="work">
+                <div class="section__title">
+                  <h1 class="section__title-number"></h1>
+                  <h2 class="section__title-text">Some work we've done</h2>
+                </div>
+                <p class="section__paragraph">
+                  Our work can be found around the world for a wide variety of
+                  clients covering different products and services in unique
+                  sectors. We provide cutting-edge digital marketing services
+                  that create a bold online presence for our customer.<br />
+                  <a href="./our-work.html" class="section__button">Our Work</a>
+                </p>
+              </section>
+              <section class="section">
+                <div class="section__title">
+                  <h1 class="section__title-number"></h1>
+                  <h2 class="section__title-text">Our Services</h2>
+                </div>
+                <p class="section__paragraph">
+                  Our expansive services include everything a growth-focused
+                  business needs to tap into their true potential. From
+                  groundbreaking websites to social media marketing and digital
+                  advertising to email marketing and strategic marketing
+                  consultation; our services cater to your needs.<br />
+                  <a href="./services.html" class="section__button"
+                    >Our Services</a
+                  >
+                </p>
+              </section>
+              <section class="section transparent-overlay" id="contact">
+                <div class="section__title">
+                  <h1 class="section__title-number"></h1>
+                  <h2 class="section__title-text">Contact</h2>
+                </div>
+                <div>
+                  <p class="contact-paragraph">
+                    Interested in taking a <strong>bold</strong> step for your
+                    brand?
+                  </p>
+                  <p class="contact-paragraph">
+                    Leave your contact info below and we'll be in touch
+                  </p>
+                  <form class="section__paragraph">
+                    <input
+                      class="form-field"
+                      type="text"
+                      placeholder="Name"
+                      id="form-name"
+                    />
+                    <input
+                      class="form-field"
+                      type="text"
+                      placeholder="Email"
+                      id="form-email"
+                    />
+                    <textarea
+                      class="form-field"
+                      type="text"
+                      placeholder="Add a message"
+                      id="form-message"
+                    ></textarea>
+                    <a
+                      href="#"
+                      class="section__button"
+                      onclick="formSubmission(document.getElementById('form-name').value, document.getElementById('form-email').value, document.getElementById('form-message').value)"
+                      >Submit</a
+                    >
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="layout__line"></div>
+        </div>
+      </main>
+      <script type="module" src="./app/index.js"></script>
+      <script src="./app/other-stuff.js"></script>
+      <script src="./app/navbar.js"></script>
+      <script src="./app/navbar-gsap.js"></script>
 
+      <script src="./app/form-submit.js"></script>
 
-
-			<div class="content">
-				<div class="scroll__stage">
-					<div class="scroll__content">
-						<section class="section">
-							<div class="section__title">
-								<h1 class="section__title-number" >A digital marketing agency for the modern age.</h1>
-								<h2 class="section__title-text"> 	</h2>
-								<p class="section__title-arrow">
-									<span>➤</span><br>
-									<span>➤</span>
-								</p>
-							</div>
-							<p class="section__paragraph">
-								We do bold work and we do it well.<br>
-								<a href="#work" class="section__button" id="discover-btn"
-							>Discover</a>
-							</p>
-							<!-- onclick="document.getElementById('some-work').scrollIntoView(); " -->
-						</section>
-						<section class="section transparent-overlay" id="work">
-							<div class="section__title">
-								<h1 class="section__title-number"></h1>
-								<h2 class="section__title-text">Some work we've done</h2>
-							</div>
-							<p class="section__paragraph">
-								Our work can be found around the world for a wide variety of clients covering different products and services in unique sectors. We provide cutting-edge digital marketing services that create a bold online presence for our customer.<br>
-								<a href="./our-work.html" class="section__button">Our Work</a>
-							</p>
-						</section>
-						<section class="section">
-							<div class="section__title">
-								<h1 class="section__title-number"></h1>
-								<h2 class="section__title-text">Our Services</h2>
-							</div>
-							<p class="section__paragraph">
-								Our expansive services include everything a growth-focused business needs to tap into their true potential. From groundbreaking websites to social media marketing and digital advertising to email marketing and strategic marketing consultation; our services cater to your needs.<br>
-								<a href="./services.html" class="section__button">Our Services</a>
-							</p>
-							
-						</section>
-						<section class="section transparent-overlay" id="contact">
-							<div class="section__title">
-								<h1 class="section__title-number"></h1>
-								<h2 class="section__title-text">Contact</h2>
-							</div>
-							<div>
-							<p class="contact-paragraph">Interested in taking a <strong>bold</strong> step for your brand?</p>
-							<p class="contact-paragraph">Leave your contact info below and we'll be in touch</p>
-							<form class="section__paragraph">
-								<input class="form-field" type="text" placeholder="Name" id="form-name">
-								<input class="form-field" type="text" placeholder="Email" id="form-email">
-								<textarea class="form-field" type="text" placeholder="Add a message" id="form-message"></textarea>
-								<a href="#" class="section__button" onclick="formSubmission(document.getElementById('form-name').value, document.getElementById('form-email').value, document.getElementById('form-message').value)">Submit</a>
-							</form>
-							</div>
-						</section>
-						
-					</div>
-				</div>
-				<div class="layout__line"></div>
-			</div>
-		</main>
-		<script type="module" src="./app/index.js"></script>
-		<script src="./app/other-stuff.js"></script>
-		<script src="./app/navbar.js"></script>
-		<script src="./app/navbar-gsap.js"></script>
-		
-		<script src="./app/form-submit.js"></script>
-
-
-		
-
-		<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
-		</div>
-	</body>
+      <!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+    </div>
+  </body>
 </html>

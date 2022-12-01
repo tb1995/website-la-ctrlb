@@ -1,0 +1,1 @@
+var btn=document.getElementById("discover-btn"),workDiv=document.getElementById("work");btn.addEventListener("click",(function(){workDiv.scrollIntoView({behavior:"smooth",block:"end",inline:"nearest"}),console.log(workDiv),window.scrollTo({top:workDiv.offsetTop})}),!0);

@@ -23,6 +23,7 @@ $('html,body').animate({
 
 class ScrollStage {
   constructor() {
+    
     this.element = document.querySelector('.content')
 
     this.elements = {
@@ -94,6 +95,7 @@ class ScrollStage {
       10
     )
 
+
     this.clock = new THREE.Clock()
 
     this.smoothScroll = new SmoothScroll({ 
@@ -121,6 +123,7 @@ class ScrollStage {
     this.addEventListeners()
     this.onResize()
     this.update()
+
   }
 
   /**
@@ -129,6 +132,7 @@ class ScrollStage {
   addCanvas() {
     this.canvas.classList.add('webgl')
     document.body.appendChild(this.canvas)
+
   }
 
   addCamera() {
